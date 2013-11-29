@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PortableRest</id>
+    <version>2.1.2</version>
+    <title>PortableRest</title>
+    <authors>AdvancedREI</authors>
+    <owners>AdvancedREI</owners>
+    <licenseUrl>http://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>http://github.com/AdvancedREI/PortableRest</projectUrl>
+    <iconUrl>https://advancedrei.blob.core.windows.net/nuget/PortableRest.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for consuming REST APIs from Portable Class Libraries (.NET 4.5, Windows Phone 8, and Windows 8.x). Designed to be partially drop-in compatible with RestSharp.</description>
+    <releaseNotes>2.1.2: Adds missing XML documentation file.
+2.1: Adds RestRequest.AddQueryString. Updated minimum package references for Mono-compatible licenses.
+2.0: Removed support for Silverlight due to Microsoft's new Reflection framework on .NET 4.5. Added initial support for submitting XML payloads. Strong-name signed the assembly so it can be used in strong-name signed projects.
+1.2.0-beta: Updated to latest packages, include Microsoft.Bcl.Build directly to help with app.config issues.
+1.1.0-alpha: Compiled to HttpClient 2.2.
+1.0.8-alpha: Compile to new dependencies.
+1.0.6-alpha: Update based on changes to HttpClient.Compression.
+1.0.5-alpha: Added Compression support.
+1.0.4-alpha: Added basic POST support, &amp; updated XML deserialization.
+1.0.3-alpha: Added XML deserialization with DataContracts.
+1.0.0-alpha: First release.</releaseNotes>
+    <copyright>Copyright © 2013 AdvancedREI, LLC.</copyright>
+    <tags>REST Portable Class Library PCL RestSharp HTTP API JSON XML</tags>
+    <dependencies>
+      <group targetFramework=".NETPortable0.0-net45+wp80+win80">
+        <dependency id="Newtonsoft.Json" version="5.0.8" />
+        <dependency id="Microsoft.Bcl" version="1.1.6" />
+        <dependency id="Microsoft.Bcl.Async" version="1.0.165" />
+        <dependency id="Microsoft.Bcl.Build" version="1.0.13" />
+        <dependency id="Microsoft.Net.Http" version="2.2.18" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
