@@ -8,11 +8,12 @@ namespace BingGeocoder
     /// </summary>
     public interface IGeoCoder
     {
-        Task<GeoCodeResult> AddressesFromCoordinate(double lat, double lon);
-        Task<Tuple<double, double>> CoordinateFromAddress(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion);
-        Task<Tuple<double, double>> CoordinateFromPostalCode(string postalCode, string countryRegion);
-        Task<string> PostalCodeFromCoordinate(double lat, double lon);
-        Task<GeoCodeResult> Query(string query);
+        Task<Tuple<double, double>> GetCoordinate(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1);
+        Task<Tuple<double, double>> GetCoordinate(string postalCode, string countryRegion);
+        Task<Tuple<double, double>> GetCoordinate(string landMark, int maxResults = 1);
+        Task<string> GetAddressPart(double lat, double lon, string entityType);
+        Task<GeoCodeResult> GetAddress(double lat, double lon);
+        Task<GeoCodeResult> Query(string query, int maxResults = 1);
         Task<Tuple<double, double>> QueryCoordinate(string query);
     }
 }
