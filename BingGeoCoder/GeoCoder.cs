@@ -91,7 +91,7 @@ namespace BingGeocoder
             var parms = new Dictionary<string, object>();
             parms.Add("maxResults", maxResults);
 
-            var result = await _client.Get<GeoCodeResult>("Locations/" + WebUtility.UrlEncode(landMark), parms);
+            var result = await _client.Get<GeoCodeResult>("Locations/" + landMark, parms);
 
             return result.FirstCoordinate();
         }
