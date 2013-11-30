@@ -21,6 +21,10 @@ namespace BingGeocoder
             UserContext = context;
         }
 
+        public string Culture { get; private set; }
+
+        public UserContext UserContext { get; private set; }
+
         public async Task<T> Get<T>(string resource) where T : class
         {
             var request = new RestRequest(resource, HttpMethod.Get);
@@ -63,9 +67,5 @@ namespace BingGeocoder
                     request.AddQueryString("umv", string.Format("{0},{1},{2},{3}", UserContext.MapView.Item1, UserContext.MapView.Item2, UserContext.MapView.Item3, UserContext.MapView.Item4));
             }
         }
-
-        public string Culture { get; private set; }
-
-        public UserContext UserContext { get; private set; }
     }
 }

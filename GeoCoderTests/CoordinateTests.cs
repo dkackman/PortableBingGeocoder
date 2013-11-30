@@ -35,7 +35,6 @@ namespace GeoCoderTests
             Assert.AreEqual(postalCode, "55116");
         }
 
-
         [TestMethod]
         public async Task CoordinateFromAddress()
         {

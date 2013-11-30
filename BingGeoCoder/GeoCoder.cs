@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Net;
 
 namespace BingGeocoder
 {
@@ -38,31 +35,52 @@ namespace BingGeocoder
             return result.GetFirstFormattedAddress();
         }
 
-        public async Task<GeoCodeResult> GetAddress(double lat, double lon)
+        public async Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false)
+        {
+            var result = await GetGeoCodeResult(lat, lon, includeNeighborhood);
+
+            return result.GetFirstAddress();
+        }
+
+        public async Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false)
         {
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", "Address,Neighborhood,PopulatedPlace,Postcode1,AdminDivision1,AdminDivision2,CountryRegion");
-            parms.Add("includeNeighborhood", "1");
+            parms.Add("includeNeighborhood", includeNeighborhood ? "1" : "0");
 
             return await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
         }
 
-        public async Task<Tuple<double, double>> GetCoordinate(string postalCode, string countryRegion)
+        public async Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
+        {
+            var parms = new Dictionary<string, object>();
+            parms.Add("addressLine", addressLine);
+            parms.Add("locality", locality);
+            parms.Add("adminDistrict", adminDistrict);
+            parms.Add("postalCode", postalCode);
+            parms.Add("countryRegion", countryRegion);
+            parms.Add("maxResults", maxResults);
+
+            return await _client.Get<GeoCodeResult>("Locations", parms);
+        }
+
+        public async Task<Tuple<double, double>> GetCoordinate(string postalCode, string countryRegion, int maxResults = 1)
         {
             var parms = new Dictionary<string, object>();
             parms.Add("countryRegion", countryRegion);
             parms.Add("postalCode", postalCode);
+            parms.Add("maxResults", 1);
 
             var result = await _client.Get<GeoCodeResult>("Locations", parms);
 
-            return result.FirstCoordinate();
+            return result.GetFirstCoordinate();
         }
 
-        public async Task<Tuple<double, double>> QueryCoordinate(string query)
+        public async Task<Tuple<double, double>> QueryCoordinate(string query, int maxResults = 1)
         {
-            var result = await Query(query);
+            var result = await Query(query, maxResults);
 
-            return result.FirstCoordinate();
+            return result.GetFirstCoordinate();
         }
 
         public async Task<GeoCodeResult> Query(string query, int maxResults = 1)
@@ -76,17 +94,9 @@ namespace BingGeocoder
 
         public async Task<Tuple<double, double>> GetCoordinate(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
         {
-            var parms = new Dictionary<string, object>();
-            parms.Add("addressLine", addressLine);
-            parms.Add("locality", locality);
-            parms.Add("adminDistrict", adminDistrict);
-            parms.Add("postalCode", postalCode);
-            parms.Add("countryRegion", countryRegion);
-            parms.Add("maxResults", maxResults);
+            var result = await GetGeoCodeResult(addressLine, locality, adminDistrict, postalCode, countryRegion, maxResults);
 
-            var result = await _client.Get<GeoCodeResult>("Locations", parms);
-
-            return result.FirstCoordinate();
+            return result.GetFirstCoordinate();
         }
 
         public async Task<Tuple<double, double>> GetCoordinate(string landMark, int maxResults = 1)
@@ -96,7 +106,7 @@ namespace BingGeocoder
 
             var result = await _client.Get<GeoCodeResult>("Locations/" + landMark, parms);
 
-            return result.FirstCoordinate();
+            return result.GetFirstCoordinate();
         }
     }
 }

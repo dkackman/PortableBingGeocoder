@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BingGeocoder
 {
@@ -12,14 +8,17 @@ namespace BingGeocoder
         {
             IPAddress = ip;
         }
+
         public UserContext(Tuple<double, double> location)
         {
             Location = location;
         }
+
         public UserContext(Tuple<double, double, double, double> mapView)
         {
             MapView = mapView;
         }
+
         public UserContext(string ip, Tuple<double, double> location, Tuple<double, double, double, double> mapView)
         {
             IPAddress = ip;

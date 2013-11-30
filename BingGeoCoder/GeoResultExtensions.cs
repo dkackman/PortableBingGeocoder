@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 
 namespace BingGeocoder
 {
-    static class GeoResultExtensions
+    public static class GeoResultExtensions
     {
-        public static Tuple<double, double> FirstCoordinate(this GeoCodeResult result)
+        public static Address GetFirstAddress(this GeoCodeResult result)
+        {
+            if (result.resourceSets.Count > 0 && result.resourceSets[0].resources.Count > 0)
+                return result.resourceSets[0].resources[0].address;            
+
+            return null;
+        }
+
+        public static Tuple<double, double> GetFirstCoordinate(this GeoCodeResult result)
         {
             if (result.resourceSets.Count > 0 && result.resourceSets[0].resources.Count > 0)
             {
@@ -28,6 +32,7 @@ namespace BingGeocoder
 
             return "";
         }
+
         public static string GetFirstAddressPart(this GeoCodeResult result, string part)
         {
             if (result.resourceSets.Count > 0 && result.resourceSets[0].resources.Count > 0)
