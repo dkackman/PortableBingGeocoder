@@ -13,7 +13,7 @@ For some reason Microsoft doesn't have a .NET client for Bing geocoding services
         public async Task RoundtripCoordinateToPostalCode()
         {
             var service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests");
-            var coord = await service.GetCoordinate("55116", "US");
+            var coord = await service.GetCoordinate(new Address() { postalCode = "55116", countryRegion = "US" });
 
             Assert.IsTrue(coord.Item1.AboutEqual(44.9108238220215));
             Assert.IsTrue(coord.Item2.AboutEqual(-93.1702041625977));
