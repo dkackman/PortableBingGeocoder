@@ -13,6 +13,7 @@ namespace BingGeocoder
         Task<Tuple<double, double>> GetCoordinate(string landMark, int maxResults = 1);
         Task<string> GetAddressPart(double lat, double lon, string entityType);
         Task<GeoCodeResult> GetAddress(double lat, double lon);
+        Task<string> GetFormattedAddress(double lat, double lon);
         Task<GeoCodeResult> Query(string query, int maxResults = 1);
         Task<Tuple<double, double>> QueryCoordinate(string query);
     }

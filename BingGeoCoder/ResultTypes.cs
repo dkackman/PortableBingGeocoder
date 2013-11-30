@@ -10,6 +10,9 @@ namespace BingGeocoder
         public string locality { get; set; }
         public string adminDistrict2 { get; set; }
         public string formattedAddress { get; set; }
+        public string neighborhood { get; set; }
+        public string addressLine { get; set; }
+        public string landmark { get; set; }
     }
 
     public class Point

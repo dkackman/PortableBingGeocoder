@@ -20,25 +20,28 @@ namespace BingGeocoder
         {
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", entityType);
+            if (entityType.Equals("Neighborhood", StringComparison.OrdinalIgnoreCase))
+                parms.Add("includeNeighborhood", "1");
 
             var result = await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
 
-            if (result.resourceSets.Count > 0 && result.resourceSets[0].resources.Count > 0)
-                return result.resourceSets[0].resources[0].address.postalCode;
+            return result.GetFirstAddressPart(entityType);
+        }
 
-            return "";
+        public async Task<string> GetFormattedAddress(double lat, double lon)
+        {
+            var parms = new Dictionary<string, object>();
+            parms.Add("includeEntityTypes", "Address,PopulatedPlace,Postcode1,AdminDivision1,CountryRegion");
+
+            var result = await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
+
+            return result.GetFirstFormattedAddress();
         }
 
         public async Task<GeoCodeResult> GetAddress(double lat, double lon)
         {
             var parms = new Dictionary<string, object>();
-            parms.Add("includeEntityTypes", "Address");
-            parms.Add("includeEntityTypes", "Neighborhood");
-            parms.Add("includeEntityTypes", "PopulatedPlace");
-            parms.Add("includeEntityTypes", "Postcode1");
-            parms.Add("includeEntityTypes", "AdminDivision1");
-            parms.Add("includeEntityTypes", "AdminDivision2");
-            parms.Add("includeEntityTypes", "CountryRegion");
+            parms.Add("includeEntityTypes", "Address,Neighborhood,PopulatedPlace,Postcode1,AdminDivision1,AdminDivision2,CountryRegion");
             parms.Add("includeNeighborhood", "1");
 
             return await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
