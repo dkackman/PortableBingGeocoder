@@ -3,7 +3,8 @@
 namespace BingGeocoder
 {
     /// <summary>
-    /// Used to provide more accurate results based on the user locations
+    /// Used to provide more accurate results based on the user's locations
+    /// Typically only one of the properties will be set
     /// </summary>
     public class UserContext
     {
@@ -58,7 +59,7 @@ namespace BingGeocoder
         public Tuple<double, double> Location { get; private set; }
 
         /// <summary>
-        /// The boudning box of a map view
+        /// The bounding box of a map view
         /// </summary>
         public Tuple<double, double, double, double> MapView { get; private set; }
     }
