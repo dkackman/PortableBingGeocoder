@@ -56,31 +56,6 @@ namespace BingGeocoder
             return await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
         }
 
-        public async Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
-        {
-            var parms = new Dictionary<string, object>();
-            parms.Add("addressLine", addressLine);
-            parms.Add("locality", locality);
-            parms.Add("adminDistrict", adminDistrict);
-            parms.Add("postalCode", postalCode);
-            parms.Add("countryRegion", countryRegion);
-            parms.Add("maxRes", maxResults);
-
-            return await _client.Get<GeoCodeResult>("Locations", parms);
-        }
-
-        public async Task<Tuple<double, double>> GetCoordinate(string postalCode, string countryRegion, int maxResults = 1)
-        {
-            var parms = new Dictionary<string, object>();
-            parms.Add("countryRegion", countryRegion);
-            parms.Add("postalCode", postalCode);
-            parms.Add("maxRes", 1);
-
-            var result = await _client.Get<GeoCodeResult>("Locations", parms);
-
-            return result.GetFirstCoordinate();
-        }
-
         public async Task<Tuple<double, double>> QueryCoordinate(string query, int maxResults = 1)
         {
             var result = await Query(query, maxResults);
@@ -112,6 +87,31 @@ namespace BingGeocoder
             var result = await _client.Get<GeoCodeResult>("Locations/" + landMark, parms);
 
             return result.GetFirstCoordinate();
+        }
+
+        public async Task<Tuple<double, double>> GetCoordinate(Address address, int maxResults = 1)
+        {
+            var result = await GetGeoCodeResult(address, maxResults);
+
+            return result.GetFirstCoordinate();
+        }
+
+        public async Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
+        {
+            var parms = new Dictionary<string, object>();
+            parms.Add("addressLine", addressLine);
+            parms.Add("locality", locality);
+            parms.Add("adminDistrict", adminDistrict);
+            parms.Add("postalCode", postalCode);
+            parms.Add("countryRegion", countryRegion);
+            parms.Add("maxRes", maxResults);
+
+            return await _client.Get<GeoCodeResult>("Locations", parms);
+        }
+
+        public async Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1)
+        {
+            return await GetGeoCodeResult(address.addressLine, address.locality, address.adminDistrict, address.postalCode, address.countryRegion, maxResults);
         }
     }
 }

@@ -19,15 +19,14 @@ namespace BingGeocoder
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
         /// <returns>The coordinate of the address. {0,0} if not found</returns>
         Task<Tuple<double, double>> GetCoordinate(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1);
-       
+
         /// <summary>
-        /// Retrieves the geo coordinate of a postal code
+        /// Retreives the geo coordinate of a full or partial address
         /// </summary>
-        /// <param name="postalCode">Postal code part. ex 98052</param>
-        /// <param name="countryRegion">Country part. ex US</param>
+        /// <param name="address">The address</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
-        /// <returns>The coordinate of the postal code. {0,0} if not found</returns>
-        Task<Tuple<double, double>> GetCoordinate(string postalCode, string countryRegion, int maxResults = 1);
+        /// <returns>The coordinate of the address. {0,0} if not found</returns>
+        Task<Tuple<double, double>> GetCoordinate(Address address, int maxResults = 1);
 
         /// <summary>
         /// Retrieves the geo coordinate of a landmark
@@ -57,6 +56,14 @@ namespace BingGeocoder
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
         /// <returns>GeoCodeResult</returns>
         Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1);
+
+        /// <summary>
+        /// Retreives the GeoCodeResult for the given full or partial address
+        /// </summary>
+        /// <param name="address">The address</param>
+        /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
+        /// <returns>GeoCodeResult</returns>
+        Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1);
         
         /// <summary>
         /// Retreives part of an address at the geo coordinate
