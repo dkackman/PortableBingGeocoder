@@ -25,5 +25,14 @@ namespace GeoCoderTests
 
             Assert.IsNotNull(address);
         }
+
+        [TestMethod]
+        public async Task RoundtripPostalCode()
+        {
+            var coord = await _service.GetCoordinate("55116", "US");
+            var address = await _service.GetAddress(coord.Item1, coord.Item2);
+
+            Assert.AreEqual(address.postalCode, "55116");
+        }
     }
 }

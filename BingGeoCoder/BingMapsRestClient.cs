@@ -29,6 +29,9 @@ namespace BingGeocoder
         {
             var request = new RestRequest(resource, HttpMethod.Get);
             request.ContentType = ContentTypes.FormUrlEncoded;
+            
+            SetAPIParams(request);
+
             return await ExecuteAsync<T>(request);
         }
 

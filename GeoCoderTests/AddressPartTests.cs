@@ -81,5 +81,13 @@ namespace GeoCoderTests
 
             Assert.AreEqual(country, "United States");
         }
+
+        [TestMethod]
+        public async Task GetCountryFromCoordinateUsingEnum()
+        {
+            var country = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, AddressEntityType.CountryRegion);
+
+            Assert.AreEqual(country, "United States");
+        }
     }
 }

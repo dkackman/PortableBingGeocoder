@@ -61,14 +61,5 @@ namespace GeoCoderTests
             Assert.IsTrue(coord.Item1.AboutEqual(48.858600616455078));
             Assert.IsTrue(coord.Item2.AboutEqual(2.2939798831939697));
         }
-
-        [TestMethod]
-        public async Task RoundtripPostalCode()
-        {
-            var coord = await _service.GetCoordinate("55116", "US");
-            var postalCode = await _service.GetAddressPart(coord.Item1, coord.Item2, "Postcode1");
-
-            Assert.AreEqual(postalCode, "55116");
-        }
     }
 }

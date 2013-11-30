@@ -37,6 +37,7 @@
     <CodeAnalysisRuleSet>GlobalizationRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AddressEntityType.cs" />
     <Compile Include="BingMapsRestClient.cs" />
     <Compile Include="GeoCoder.cs" />
     <Compile Include="GeoResultExtensions.cs" />

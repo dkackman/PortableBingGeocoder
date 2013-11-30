@@ -63,9 +63,18 @@ namespace BingGeocoder
         /// </summary>
         /// <param name="lat">Latitude</param>
         /// <param name="lon">Longitude</param>
-        /// <param name="entityType">The enti ty type part to return</param>
+        /// <param name="entityType">The entity type part to return</param>
         /// <returns>The address part associated with the entityType, for the first result</returns>
         Task<string> GetAddressPart(double lat, double lon, string entityType);
+
+        /// <summary>
+        /// Retreives part of an address at the geo coordinate
+        /// </summary>
+        /// <param name="lat">Latitude</param>
+        /// <param name="lon">Longitude</param>
+        /// <param name="entityType">The entity type part to return</param>
+        /// <returns>The address part associated with the entityType, for the first result</returns>
+        Task<string> GetAddressPart(double lat, double lon, AddressEntityType entityType);
 
         /// <summary>
         /// Retrieves the address of a location

@@ -13,12 +13,17 @@ namespace BingGeocoder
             _client = new BingMapsRestClient(apiKey, user_agent, culture, context);
         }
 
+        public async Task<string> GetAddressPart(double lat, double lon, AddressEntityType entityType)
+        {
+            return await GetAddressPart(lat, lon, entityType.ToString());
+        }
+
         public async Task<string> GetAddressPart(double lat, double lon, string entityType)
         {
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", entityType);
             if (entityType.Equals("Neighborhood", StringComparison.OrdinalIgnoreCase))
-                parms.Add("includeNeighborhood", "1");
+                parms.Add("inclnb", "1");
 
             var result = await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
 
@@ -46,7 +51,7 @@ namespace BingGeocoder
         {
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", "Address,Neighborhood,PopulatedPlace,Postcode1,AdminDivision1,AdminDivision2,CountryRegion");
-            parms.Add("includeNeighborhood", includeNeighborhood ? "1" : "0");
+            parms.Add("inclnb", includeNeighborhood ? "1" : "0");
 
             return await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
         }
@@ -59,7 +64,7 @@ namespace BingGeocoder
             parms.Add("adminDistrict", adminDistrict);
             parms.Add("postalCode", postalCode);
             parms.Add("countryRegion", countryRegion);
-            parms.Add("maxResults", maxResults);
+            parms.Add("maxRes", maxResults);
 
             return await _client.Get<GeoCodeResult>("Locations", parms);
         }
@@ -69,7 +74,7 @@ namespace BingGeocoder
             var parms = new Dictionary<string, object>();
             parms.Add("countryRegion", countryRegion);
             parms.Add("postalCode", postalCode);
-            parms.Add("maxResults", 1);
+            parms.Add("maxRes", 1);
 
             var result = await _client.Get<GeoCodeResult>("Locations", parms);
 
@@ -87,7 +92,7 @@ namespace BingGeocoder
         {
             var parms = new Dictionary<string, object>();
             parms.Add("q", query.Replace("\n", ", "));
-            parms.Add("maxResults", maxResults);
+            parms.Add("maxRes", maxResults);
 
             return await _client.Get<GeoCodeResult>("Locations", parms);
         }
@@ -102,7 +107,7 @@ namespace BingGeocoder
         public async Task<Tuple<double, double>> GetCoordinate(string landMark, int maxResults = 1)
         {
             var parms = new Dictionary<string, object>();
-            parms.Add("maxResults", maxResults);
+            parms.Add("maxRes", maxResults);
 
             var result = await _client.Get<GeoCodeResult>("Locations/" + landMark, parms);
 
