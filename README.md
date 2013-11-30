@@ -18,7 +18,7 @@ For some reason Microsoft doesn't have a .NET client for Bing geocoding services
             Assert.IsTrue(coord.Item1.AboutEqual(44.9108238220215));
             Assert.IsTrue(coord.Item2.AboutEqual(-93.1702041625977));
             
-            var postalCode = await service.GetAddressPart(coord.Item1, coord.Item2, "Postcode1");
+            var address = await service.GetAddress(coord.Item1, coord.Item2);
 
-            Assert.AreEqual(postalCode, "55116");
+            Assert.AreEqual(address.postalCode, "55116");
         }
