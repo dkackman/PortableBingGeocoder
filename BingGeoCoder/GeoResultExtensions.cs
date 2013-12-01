@@ -16,13 +16,13 @@ namespace BingGeocoder
                    from r in rs.resources
                    select r.address;
         }
+
         public static IEnumerable<Tuple<double, double>> GetCoordinates(this GeoCodeResult result)
         {
             return from rs in result.resourceSets
                    from r in rs.resources
-                   let lat = r.point.coordinates[0]
-                   let lon = r.point.coordinates[1]
-                   select new Tuple<double, double>(lat, lon);
+                   let pts = r.point.coordinates
+                   select new Tuple<double, double>(pts[0], pts[1]);
         }
 
         public static Address GetFirstAddress(this GeoCodeResult result)

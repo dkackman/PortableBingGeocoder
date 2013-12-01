@@ -45,6 +45,23 @@ namespace GeoCoderTests
         }
 
         [TestMethod]
+        public async Task CoordinateFromAddressObject()
+        {
+            var address = new Address()
+            {
+                addressLine ="One Microsoft Way",
+                locality = "Redmond",
+                adminDistrict = "WA",
+                postalCode = "98052",
+                countryRegion ="US"
+            };
+            var coord = await _service.GetCoordinate(address);
+
+            Assert.IsTrue(coord.Item1.AboutEqual(47.640049383044243));
+            Assert.IsTrue(coord.Item2.AboutEqual(-122.12979689240456));
+        }
+
+        [TestMethod]
         public async Task CoordinateFromAddressQuery()
         {
             var coord = await _service.QueryCoordinate("One Microsoft Way, Redmond, WA 98052");
