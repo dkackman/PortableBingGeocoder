@@ -9,6 +9,13 @@ namespace BingGeocoder
     public interface IGeoCoder
     {
         /// <summary>
+        /// Uses the Bing service to attempt to parse an address into its constuent parts
+        /// </summary>
+        /// <param name="address">The address to parse</param>
+        /// <returns>The parsed address. Null if not successfully parsed by Bing</returns>
+        Task<Address> ParseAddress(string address);
+
+        /// <summary>
         /// Retrieves the geo coordinate from detailed address inputs
         /// </summary>
         /// <param name="addressLine">The address part. ex One Microsoft Way</param>

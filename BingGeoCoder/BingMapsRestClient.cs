@@ -25,16 +25,6 @@ namespace BingGeocoder
 
         public UserContext UserContext { get; private set; }
 
-        public async Task<T> Get<T>(string resource) where T : class
-        {
-            var request = new RestRequest(resource, HttpMethod.Get);
-            request.ContentType = ContentTypes.FormUrlEncoded;
-            
-            SetAPIParams(request);
-
-            return await ExecuteAsync<T>(request);
-        }
-
         public async Task<T> Get<T>(string endPoint, IDictionary<string, object> parms) where T : class
         {
             Debug.Assert(parms != null);
@@ -44,6 +34,7 @@ namespace BingGeocoder
 
             SetAPIParams(request);
 
+            // add each parameter to the query string, ignoring params with null values
             foreach (var kvp in parms.Where(kvp => kvp.Value != null))
                 request.AddQueryString(kvp.Key, kvp.Value.ToString());
 

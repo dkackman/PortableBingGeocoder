@@ -72,6 +72,17 @@ namespace BingGeocoder
             return await _client.Get<GeoCodeResult>("Locations", parms);
         }
 
+        public async Task<Address> ParseAddress(string address)
+        {
+            var parms = new Dictionary<string, object>();
+            parms.Add("q", address.Replace("\n", ", "));
+            parms.Add("maxRes", 1);
+            parms.Add("incl", "queryParse");
+
+            var result = await _client.Get<GeoCodeResult>("Locations", parms);
+            return result.GetFirstAddress();
+        }
+
         public async Task<Tuple<double, double>> GetCoordinate(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
         {
             var result = await GetGeoCodeResult(addressLine, locality, adminDistrict, postalCode, countryRegion, maxResults);
