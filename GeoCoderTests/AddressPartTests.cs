@@ -10,12 +10,21 @@ namespace GeoCoderTests
     [TestClass]
     public class AddressPartTests
     {
-        private IGeoCoder _service;
+        private static IGeoCoder _service;
 
-        [TestInitialize]
-        public void Init()
+        [ClassInitialize]
+        public static void Init(TestContext context)
         {
-            _service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests");
+            _service = new GeoCoder(APIKEY.Key, "Portable-Bing-GeoCoder-UnitTests/1.0");
+        }
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            if (_service != null)
+            {
+                _service.Dispose();
+            }
         }
 
         [TestMethod]
@@ -23,7 +32,7 @@ namespace GeoCoderTests
         {
             var address = await _service.GetFormattedAddress(44.9108238220215, -93.1702041625977);
 
-            Assert.AreEqual(address, "1012 Davern St, St Paul, MN 55116");
+            Assert.AreEqual("1012 Davern St, St Paul, MN 55116", address);
         }
 
         [TestMethod]
@@ -31,7 +40,7 @@ namespace GeoCoderTests
         {
             var address = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "Neighborhood");
 
-            Assert.AreEqual(address, "Highland");
+            Assert.AreEqual("Highland", address);
         }
 
         [TestMethod]
@@ -39,7 +48,7 @@ namespace GeoCoderTests
         {
             var address = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "Address");
 
-            Assert.AreEqual(address, "1012 Davern St");
+            Assert.AreEqual("1012 Davern St", address);
         }
 
         [TestMethod]
@@ -47,7 +56,7 @@ namespace GeoCoderTests
         {
             var postalCode = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "Postcode1");
 
-            Assert.AreEqual(postalCode, "55116");
+            Assert.AreEqual("55116", postalCode);
         }
 
         [TestMethod]
@@ -55,7 +64,7 @@ namespace GeoCoderTests
         {
             var city = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "PopulatedPlace");
 
-            Assert.AreEqual(city, "St Paul");
+            Assert.AreEqual("St Paul", city);
         }
 
         [TestMethod]
@@ -63,7 +72,7 @@ namespace GeoCoderTests
         {
             var county = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "AdminDivision2");
 
-            Assert.AreEqual(county, "Ramsey Co.");
+            Assert.AreEqual("Ramsey Co.", county);
         }
 
         [TestMethod]
@@ -71,7 +80,7 @@ namespace GeoCoderTests
         {
             var state = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "AdminDivision1");
 
-            Assert.AreEqual(state, "MN");
+            Assert.AreEqual("MN", state);
         }
 
         [TestMethod]
@@ -79,7 +88,7 @@ namespace GeoCoderTests
         {
             var country = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "CountryRegion");
 
-            Assert.AreEqual(country, "United States");
+            Assert.AreEqual("United States", country);
         }
 
         [TestMethod]
@@ -87,7 +96,7 @@ namespace GeoCoderTests
         {
             var country = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, AddressEntityType.CountryRegion);
 
-            Assert.AreEqual(country, "United States");
+            Assert.AreEqual("United States", country);
         }
     }
 }

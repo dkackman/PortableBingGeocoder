@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BingGeocoder
 {
+    /// <summary>
+    /// Enumeration indicating the various parts of an address
+    /// </summary>
     public enum AddressEntityType
     {
         Address,

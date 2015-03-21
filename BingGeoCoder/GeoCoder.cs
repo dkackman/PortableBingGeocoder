@@ -4,9 +4,12 @@ using System.Threading.Tasks;
 
 namespace BingGeocoder
 {
-    public class GeoCoder : IGeoCoder
+    /// <summary>
+    /// Concrete implementation of <see cref="BingGeocoder.IGeoCoder"/>
+    /// </summary>
+    public sealed class GeoCoder : IGeoCoder, IDisposable
     {
-        BingMapsRestClient _client;
+        private readonly BingMapsRestClient _client;
 
         public GeoCoder(string apiKey, string user_agent = "", string culture = "en-US", UserContext context = null)
         {
@@ -23,7 +26,9 @@ namespace BingGeocoder
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", entityType);
             if (entityType.Equals("Neighborhood", StringComparison.OrdinalIgnoreCase))
+            {
                 parms.Add("inclnb", "1");
+            }
 
             var result = await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
 
@@ -123,6 +128,17 @@ namespace BingGeocoder
         public async Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1)
         {
             return await GetGeoCodeResult(address.addressLine, address.locality, address.adminDistrict, address.postalCode, address.countryRegion, maxResults);
+        }
+
+        /// <summary>
+        /// Disposes the http client
+        /// </summary>
+        public void Dispose()
+        {
+            if (_client != null)
+            {
+                _client.Dispose();
+            }
         }
     }
 }

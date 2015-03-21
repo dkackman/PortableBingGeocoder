@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PortableBingGeoCoder</id>
+    <version>1.0.6</version>
+    <title>Portable Bing GeoCoder</title>
+    <authors>dkackman</authors>
+    <owners>dkackman</owners>
+    <description>
+      A Portable Class Library wrapper around Bing's location geocoding Rest services
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://nuget.org/packages/BingGeoCoder.NuGet.Packager</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright  2015</copyright>
+    <dependencies>
+      <group targetFramework="portable-windows8+net45+wp8+win8+wpa81+windowsphone8">
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="Microsoft.Net.Http" version="2.2.29" />
+        <dependency id="Microsoft.Bcl" version="1.1.10" />
+        <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+      </group>
+    </dependencies>
+    <references></references>
+    <tags>Bing Locations Portable Class Library PCL REST GeoCode GeoCoding API</tags>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

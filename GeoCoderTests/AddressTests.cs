@@ -10,12 +10,21 @@ namespace GeoCoderTests
     [TestClass]
     public class AddressTests
     {
-        private IGeoCoder _service;
+        private static IGeoCoder _service;
 
-        [TestInitialize]
-        public void Init()
+        [ClassInitialize]
+        public static void Init(TestContext context)
         {
-            _service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests");
+            _service = new GeoCoder(APIKEY.Key, "Portable-Bing-GeoCoder-UnitTests/1.0");
+        }
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            if (_service != null)
+            {
+                _service.Dispose();
+            }
         }
 
         [TestMethod]
@@ -32,7 +41,7 @@ namespace GeoCoderTests
             var coord = await _service.GetCoordinate(new Address() { postalCode = "55116", countryRegion = "US" });
             var address = await _service.GetAddress(coord.Item1, coord.Item2);
 
-            Assert.AreEqual(address.postalCode, "55116");
+            Assert.AreEqual("55116", address.postalCode);
         }
 
         [TestMethod]
@@ -40,11 +49,11 @@ namespace GeoCoderTests
         {
             var address = await _service.ParseAddress("One Microsoft Way, Redmond, WA 98052");
 
-            Assert.AreEqual(address.addressLine, "1 Microsoft Way");
-            Assert.AreEqual(address.locality, "Redmond");
-            Assert.AreEqual(address.adminDistrict, "WA");
-            Assert.AreEqual(address.postalCode, "98052");
-            Assert.AreEqual(address.countryRegion, "United States");
+            Assert.AreEqual("1 Microsoft Way", address.addressLine);
+            Assert.AreEqual("Redmond", address.locality);
+            Assert.AreEqual("WA", address.adminDistrict);
+            Assert.AreEqual("98052", address.postalCode);
+            Assert.AreEqual("United States", address.countryRegion);
         }
 
         [TestMethod]
@@ -55,11 +64,11 @@ namespace GeoCoderTests
 
             var address = await _service.ParseAddress("1950 Meadowvale Blvd., Mississauga, ON L5N 8L9");
 
-            Assert.AreEqual(address.addressLine, "1950 Meadowvale Blvd");
-            Assert.AreEqual(address.locality, "Mississauga");
-            Assert.AreEqual(address.adminDistrict, "ON");
-            Assert.AreEqual(address.postalCode, "L5N 8L9");
-            Assert.AreEqual(address.countryRegion, "Canada");
+            Assert.AreEqual("1950 Meadowvale Blvd", address.addressLine);
+            Assert.AreEqual("Mississauga", address.locality);
+            Assert.AreEqual("ON", address.adminDistrict);
+            Assert.AreEqual("L5N 8L9", address.postalCode);
+            Assert.AreEqual("Canada", address.countryRegion);
         }
     }
 }

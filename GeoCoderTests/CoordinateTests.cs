@@ -10,14 +10,23 @@ namespace GeoCoderTests
     [TestClass]
     public class CoordinateTests
     {
-        private IGeoCoder _service;
+        private static IGeoCoder _service;
 
-        [TestInitialize]
-        public void Init()
+        [ClassInitialize]
+        public static void Init(TestContext context)
         {
-            _service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests");
+            _service = new GeoCoder(APIKEY.Key, "Portable-Bing-GeoCoder-UnitTests/1.0");
         }
-        
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            if (_service != null)
+            {
+                _service.Dispose();
+            }
+        }
+
         [TestMethod]
         public async Task CoordinateFromPostalCode()
         {
@@ -32,7 +41,7 @@ namespace GeoCoderTests
         {
             var postalCode = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "Postcode1");
 
-            Assert.AreEqual(postalCode, "55116");
+            Assert.AreEqual("55116", postalCode);
         }
 
         [TestMethod]
@@ -49,11 +58,11 @@ namespace GeoCoderTests
         {
             var address = new Address()
             {
-                addressLine ="One Microsoft Way",
+                addressLine = "One Microsoft Way",
                 locality = "Redmond",
                 adminDistrict = "WA",
                 postalCode = "98052",
-                countryRegion ="US"
+                countryRegion = "US"
             };
             var coord = await _service.GetCoordinate(address);
 

@@ -1,64 +1,110 @@
-﻿using System.Linq;
+﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
-using PortableRest;
+using Newtonsoft.Json;
 
 namespace BingGeocoder
 {
-    class BingMapsRestClient : RestClient
+    sealed class BingMapsRestClient : IDisposable
     {
-        string _apiKey;
+        private readonly HttpClient _httpClient;
+        private readonly string _defaultParameters;
 
         public BingMapsRestClient(string api_key, string user_agent, string culture, UserContext context)
         {
-            BaseUrl = "http://dev.virtualearth.net/REST/v1/";
-            UserAgent = user_agent;
-            _apiKey = api_key;
-            Culture = culture;
-            UserContext = context;
+            _httpClient = CreateClient(user_agent);
+
+            _defaultParameters = CreateDefaultParameters(api_key, culture, context);
         }
-
-        public string Culture { get; private set; }
-
-        public UserContext UserContext { get; private set; }
 
         public async Task<T> Get<T>(string endPoint, IDictionary<string, object> parms) where T : class
         {
             Debug.Assert(parms != null);
 
-            var request = new RestRequest(endPoint, HttpMethod.Get);
-            request.ContentType = ContentTypes.FormUrlEncoded;
+            var response = await _httpClient.GetAsync(new Uri(endPoint + _defaultParameters + parms.AsQueryString("&"), UriKind.Relative));
 
-            SetAPIParams(request);
+            var content = await response.Content.ReadAsStringAsync();
 
-            // add each parameter to the query string, ignoring params with null values
-            foreach (var kvp in parms.Where(kvp => kvp.Value != null))
-                request.AddQueryString(kvp.Key, kvp.Value.ToString());
+            Debug.Assert(!string.IsNullOrEmpty(content));
+            if (!string.IsNullOrEmpty(content))
+            {
+                return JsonConvert.DeserializeObject<T>(content);
+            }
 
-            return await ExecuteAsync<T>(request);
+            return null;
         }
 
-        private void SetAPIParams(RestRequest request)
+        private static HttpClient CreateClient(string user_agent)
         {
-            request.AddQueryString("o", "json");
-            request.AddQueryString("key", _apiKey);
-
-            if (!string.IsNullOrEmpty(Culture))
-                request.AddQueryString("c", Culture);
-
-            if (UserContext != null)
+            var handler = new HttpClientHandler();
+            if (handler.SupportsAutomaticDecompression)
             {
-                if (!string.IsNullOrEmpty(UserContext.IPAddress))
-                    request.AddQueryString("ip", UserContext.IPAddress);
+                handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+            }
 
-                if (UserContext.Location != null)
-                    request.AddQueryString("ul", string.Format("{0},{1}", UserContext.Location.Item1, UserContext.Location.Item2));
+            var client = new HttpClient(handler, true);
 
-                if (UserContext.MapView != null)
-                    request.AddQueryString("umv", string.Format("{0},{1},{2},{3}", UserContext.MapView.Item1, UserContext.MapView.Item2, UserContext.MapView.Item3, UserContext.MapView.Item4));
+            if (handler.SupportsTransferEncodingChunked())
+            {
+                client.DefaultRequestHeaders.TransferEncodingChunked = true;
+            }
+
+            client.BaseAddress = new Uri("http://dev.virtualearth.net/REST/v1/", UriKind.Absolute);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            ProductInfoHeaderValue productHeader = null;
+            if (!string.IsNullOrEmpty(user_agent) && ProductInfoHeaderValue.TryParse(user_agent, out productHeader))
+            {
+                client.DefaultRequestHeaders.UserAgent.Clear();
+                client.DefaultRequestHeaders.UserAgent.Add(productHeader);
+            }
+
+            return client;
+        }
+
+        private static string CreateDefaultParameters(string key, string culture, UserContext context)
+        {
+            var d = new Dictionary<string, object>();
+
+            d.Add("key", key);
+
+            if (!string.IsNullOrEmpty(culture))
+            {
+                d.Add("c", culture);
+            }
+
+            if (context != null)
+            {
+                if (!string.IsNullOrEmpty(context.IPAddress))
+                {
+                    d.Add("ip", context.IPAddress);
+                }
+
+                if (context.Location != null)
+                {
+                    d.Add("ul", string.Format("{0},{1}", context.Location.Item1, context.Location.Item2));
+                }
+
+                if (context.MapView != null)
+                {
+                    d.Add("umv", string.Format("{0},{1},{2},{3}", context.MapView.Item1, context.MapView.Item2, context.MapView.Item3, context.MapView.Item4));
+                }
+            }
+
+            return d.AsQueryString();
+        }
+
+        public void Dispose()
+        {
+            if (_httpClient != null)
+            {
+                _httpClient.Dispose();
             }
         }
     }

@@ -6,7 +6,7 @@ namespace BingGeocoder
     /// <summary>
     /// GeoCoder interface in case mocking is needed
     /// </summary>
-    public interface IGeoCoder
+    public interface IGeoCoder : IDisposable
     {
         /// <summary>
         /// Uses the Bing service to attempt to parse an address into its constuent parts
