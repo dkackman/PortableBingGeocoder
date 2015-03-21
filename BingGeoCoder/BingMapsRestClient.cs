@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Linq;
 
 using Newtonsoft.Json;
 
@@ -12,6 +13,9 @@ namespace BingGeocoder
 {
     sealed class BingMapsRestClient : IDisposable
     {
+        private const int RETRY_COUNT = 5;
+        private const int RETRY_DELAY = 1000;
+
         private readonly HttpClient _httpClient;
         private readonly string _defaultParameters;
 
@@ -26,17 +30,43 @@ namespace BingGeocoder
         {
             Debug.Assert(parms != null);
 
-            var response = await _httpClient.GetAsync(new Uri(endPoint + _defaultParameters + parms.AsQueryString("&"), UriKind.Relative));
+            Uri uri = new Uri(endPoint + _defaultParameters + parms.AsQueryString("&"), UriKind.Relative);
 
-            var content = await response.Content.ReadAsStringAsync();
-
-            Debug.Assert(!string.IsNullOrEmpty(content));
-            if (!string.IsNullOrEmpty(content))
+            for (int i = 0; i < RETRY_COUNT; i++)
             {
-                return JsonConvert.DeserializeObject<T>(content);
+                var response = await TryGetResponse(uri);
+                if (response != null)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+
+                    Debug.Assert(!string.IsNullOrEmpty(content));
+                    if (!string.IsNullOrEmpty(content))
+                    {
+                        return JsonConvert.DeserializeObject<T>(content);
+                    }
+                }
+                else
+                {
+                    await Task.Delay(RETRY_DELAY);
+                }
             }
 
-            return null;
+            throw new HttpRequestException(string.Format("The request timed out after {0} retries.", RETRY_COUNT));
+        }
+
+        private async Task<HttpResponseMessage> TryGetResponse(Uri uri)
+        {
+            var response = await _httpClient.GetAsync(uri);
+            response.EnsureSuccessStatusCode();
+
+            IEnumerable<string> values = null;
+            // if the bing service is overloaded it sets this header to 1 to indicate that you can retry
+            if (response.Headers.TryGetValues("X-MS-BM-WS-INFO", out values) && values.Any(v => v == "1"))
+            {
+                return null;
+            }
+
+            return response;
         }
 
         private static HttpClient CreateClient(string user_agent)
