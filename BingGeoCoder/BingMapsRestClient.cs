@@ -13,16 +13,17 @@ namespace BingGeocoder
 {
     sealed class BingMapsRestClient : IDisposable
     {
-        private const int RETRY_COUNT = 5;
-        private const int RETRY_DELAY = 1000;
+        private readonly int _retryCount = 5;
+        private readonly int _retryDelay = 1000;
 
         private readonly HttpClient _httpClient;
         private readonly string _defaultParameters;
 
-        public BingMapsRestClient(string api_key, string user_agent, string culture, UserContext context)
+        public BingMapsRestClient(string api_key, int retryCount, int retryDelay, string user_agent, string culture, UserContext context)
         {
             _httpClient = CreateClient(user_agent);
-
+            _retryCount = retryCount;
+            _retryDelay = retryDelay;
             _defaultParameters = CreateDefaultParameters(api_key, culture, context);
         }
 
@@ -32,7 +33,7 @@ namespace BingGeocoder
 
             Uri uri = new Uri(endPoint + _defaultParameters + parms.AsQueryString("&"), UriKind.Relative);
 
-            for (int i = 0; i < RETRY_COUNT; i++)
+            for (int i = 0; i <= _retryCount; i++)
             {
                 var response = await TryGetResponse(uri);
                 if (response != null)
@@ -47,11 +48,11 @@ namespace BingGeocoder
                 }
                 else
                 {
-                    await Task.Delay(RETRY_DELAY);
+                    await Task.Delay(_retryDelay);
                 }
             }
 
-            throw new HttpRequestException(string.Format("The request timed out after {0} retries.", RETRY_COUNT));
+            throw new TimeoutException(string.Format("Bing service did not indicate a valid response after {0} attempts.", _retryCount));
         }
 
         private async Task<HttpResponseMessage> TryGetResponse(Uri uri)
