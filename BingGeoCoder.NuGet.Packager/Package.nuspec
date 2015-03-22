@@ -17,7 +17,7 @@
       
     </summary>
     <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/BingGeoCoder.NuGet.Packager</projectUrl>
+    <projectUrl>https://github.com/dkackman/PortableBingGeocoder</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
