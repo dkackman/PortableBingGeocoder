@@ -59,16 +59,17 @@ namespace GeoCoderTests
         [TestMethod]
         public async Task ParseACanadianAddress()
         {
-            //var coord = new Tuple<double, double>(62.832908630371094, -95.913322448730469);
-            //var service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests", "en-CA", new UserContext(coord));
+            var coord = new Tuple<double, double>(62.832908630371094, -95.913322448730469);
+            using (var service = new GeoCoder(APIKEY.Key, "Portable Bing GeoCoder unit tests", "en-CA", new UserContext(coord)))
+            {
+                var address = await service.ParseAddress("1950 Meadowvale Blvd., Mississauga, ON L5N 8L9");
 
-            var address = await _service.ParseAddress("1950 Meadowvale Blvd., Mississauga, ON L5N 8L9");
-
-            Assert.AreEqual("1950 Meadowvale Blvd", address.addressLine);
-            Assert.AreEqual("Mississauga", address.locality);
-            Assert.AreEqual("ON", address.adminDistrict);
-            Assert.AreEqual("L5N 8L9", address.postalCode);
-            Assert.AreEqual("Canada", address.countryRegion);
+                Assert.AreEqual("1950 Meadowvale Blvd", address.addressLine);
+                Assert.AreEqual("Mississauga", address.locality);
+                Assert.AreEqual("ON", address.adminDistrict);
+                Assert.AreEqual("L5N 8L9", address.postalCode);
+                Assert.AreEqual("Canada", address.countryRegion);
+            }
         }
     }
 }
