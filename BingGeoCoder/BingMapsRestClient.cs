@@ -19,9 +19,9 @@ namespace BingGeocoder
         private readonly HttpClient _httpClient;
         private readonly string _defaultParameters;
 
-        public BingMapsRestClient(string api_key, int retryCount, int retryDelay, string user_agent, string culture, UserContext context)
+        public BingMapsRestClient(string api_key, int retryCount, int retryDelay, string user_agent, string culture, UserContext context, HttpMessageHandler handler)
         {
-            _httpClient = CreateClient(user_agent);
+            _httpClient = HttpClientFactory.CreateClient(user_agent, handler);
             _retryCount = retryCount;
             _retryDelay = retryDelay;
             _defaultParameters = CreateDefaultParameters(api_key, culture, context);
@@ -68,35 +68,6 @@ namespace BingGeocoder
             }
 
             return response;
-        }
-
-        private static HttpClient CreateClient(string user_agent)
-        {
-            var handler = new HttpClientHandler();
-            if (handler.SupportsAutomaticDecompression)
-            {
-                handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-            }
-
-            var client = new HttpClient(handler, true);
-
-            if (handler.SupportsTransferEncodingChunked())
-            {
-                client.DefaultRequestHeaders.TransferEncodingChunked = true;
-            }
-
-            client.BaseAddress = new Uri("http://dev.virtualearth.net/REST/v1/", UriKind.Absolute);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            ProductInfoHeaderValue productHeader = null;
-            if (!string.IsNullOrEmpty(user_agent) && ProductInfoHeaderValue.TryParse(user_agent, out productHeader))
-            {
-                client.DefaultRequestHeaders.UserAgent.Clear();
-                client.DefaultRequestHeaders.UserAgent.Add(productHeader);
-            }
-
-            return client;
         }
 
         private static string CreateDefaultParameters(string key, string culture, UserContext context)

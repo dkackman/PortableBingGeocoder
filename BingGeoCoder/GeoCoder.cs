@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace BingGeocoder
 {
@@ -17,7 +18,7 @@ namespace BingGeocoder
         /// <param name="apiKey">Bing maps API key https://msdn.microsoft.com/en-us/library/ff428642.aspx </param>
         /// <param name="user_agent">User agnet string</param>
         /// <param name="culture">Culture of the requesting application</param>
-        /// <param name="context">Optional ontext of the request</param>
+        /// <param name="context">Optional context of the request</param>
         public GeoCoder(string apiKey, string user_agent = "", string culture = "en-US", UserContext context = null)
             : this(apiKey, 4, 1000, user_agent, culture, context)
         {
@@ -31,10 +32,25 @@ namespace BingGeocoder
         /// <param name="retryDelay">The number of milliseconds to wait between retries</param>
         /// <param name="user_agent">User agnet string</param>
         /// <param name="culture">Culture of the requesting application</param>
-        /// <param name="context">Optional ontext of the request</param>
+        /// <param name="context">Optional context of the request</param>
         public GeoCoder(string apiKey, int retryCount, int retryDelay, string user_agent = "", string culture = "en-US", UserContext context = null)
+            : this(apiKey, retryCount, retryDelay, user_agent, culture, context, null)
         {
-            _client = new BingMapsRestClient(apiKey, retryCount, retryDelay, user_agent, culture, context);
+        }
+
+        /// <summary>
+        /// ctor
+        /// </summary>
+        /// <param name="apiKey">Bing maps API key https://msdn.microsoft.com/en-us/library/ff428642.aspx </param>
+        /// <param name="retryCount">The number of times to retry the request if the Bing maps service indicates it is busy</param>
+        /// <param name="retryDelay">The number of milliseconds to wait between retries</param>
+        /// <param name="user_agent">User agnet string</param>
+        /// <param name="culture">Culture of the requesting application</param>
+        /// <param name="context">Optional context of the request</param>
+        /// <param name="handler">Optional <see cref="HttpMessageHandler"/> to use for communication (mostly for unit testing)</param>
+        public GeoCoder(string apiKey, int retryCount, int retryDelay, string user_agent = "", string culture = "en-US", UserContext context = null, HttpMessageHandler handler = null)
+        {
+            _client = new BingMapsRestClient(apiKey, retryCount, retryDelay, user_agent, culture, context, handler);
         }
 
         public async Task<string> GetAddressPart(double lat, double lon, AddressEntityType entityType)

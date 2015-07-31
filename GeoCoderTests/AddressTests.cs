@@ -8,6 +8,7 @@ using BingGeocoder;
 namespace GeoCoderTests
 {
     [TestClass]
+    [DeploymentItem(@"FakeResponses\")]
     public class AddressTests
     {
         private static IGeoCoder _service;
@@ -15,7 +16,7 @@ namespace GeoCoderTests
         [ClassInitialize]
         public static void Init(TestContext context)
         {
-            _service = new GeoCoder(APIKEY.Key, "Portable-Bing-GeoCoder-UnitTests/1.0");
+            _service = new GeoCoder(APIKEY.Key, 4, 1000, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: MockInitialize.DefaultTestHandler);
         }
 
         [ClassCleanup]

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PortableBingGeoCoder</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <title>Portable Bing GeoCoder</title>
     <authors>dkackman</authors>
     <owners>dkackman</owners>
@@ -28,6 +28,7 @@
         <dependency id="Microsoft.Net.Http" version="2.2.29" />
         <dependency id="Microsoft.Bcl" version="1.1.10" />
         <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+        <dependency id="CommonServiceLocator" version="1.3.0" />
       </group>
     </dependencies>
     <references></references>
