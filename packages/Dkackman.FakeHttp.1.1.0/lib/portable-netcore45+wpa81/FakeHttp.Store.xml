@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FakeHttp.Store</name>
+    </assembly>
+    <members>
+        <member name="T:FakeHttp.StorageFolderResponseStore">
+            <summary>
+            Class that can retreive stored response messages in a windows store app runtime environment
+            </summary>
+        </member>
+        <member name="M:FakeHttp.StorageFolderResponseStore.#ctor(Windows.Storage.IStorageFolder)">
+            <summary>
+            ctor
+            </summary>
+            <param name="storeFolder">Root folder where message are kept</param>
+        </member>
+        <member name="M:FakeHttp.StorageFolderResponseStore.#ctor(Windows.Storage.IStorageFolder,System.Func{System.String,System.String,System.Boolean})">
+            <summary>
+            ctor
+            </summary>
+            <param name="storeFolder">Root folder where message are kept</param>
+            <param name="paramFilter">call back used to determine if a given query paramters should be excluded from serialziation</param>
+        </member>
+        <member name="M:FakeHttp.StorageFolderResponseStore.FindResponse(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Retreive response message from storage based on the a request message
+            </summary>
+            <param name="request">The request message</param>
+            <returns>The response messsage</returns>
+        </member>
+    </members>
+</doc>
