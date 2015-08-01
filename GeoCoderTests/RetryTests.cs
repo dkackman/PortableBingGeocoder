@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Net.Http;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,29 +15,49 @@ namespace GeoCoderTests
     [DeploymentItem(@"FakeResponses\")]
     public class RetryTests
     {
-        private class Callbacks : ResponseCallbacks
+        /// <summary>
+        /// Used to fake a Locations response that returns the busy header on the first attempt but succeed subsequently
+        /// </summary>
+        private class RetryCallbacks : ResponseCallbacks
         {
+            private int _callCount = 0;
 
+            public override async Task<Stream> Deserialized(ResponseInfo info, Stream content)
+            {
+                // after 1 retry attempt, remove the busy header flag
+                if (_callCount++ > 1 && info.ResponseHeaders.ContainsKey("X-MS-BM-WS-INFO"))
+                {
+                    info.ResponseHeaders["X-MS-BM-WS-INFO"] = Enumerable.Repeat("0", 1);
+                }
+
+                return await base.Deserialized(info, content);
+            }
         }
 
         public TestContext TestContext { get; set; }
 
         [TestMethod]
         [ExpectedException(typeof(TimeoutException))]
-        public async Task ResponseTimesoutOnBusyHeader()
+        public async Task ResponseTimesoutOnBusyHeaderAfterRetyCountExceeded()
         {
-            var mockFolder = TestContext.DeploymentDirectory; // the folder where the unit tests are running
-            var captureFolder = Path.Combine(TestContext.TestRunDirectory, @"..\..\FakeResponses\"); // kinda hacky but this should be the solution folder
+            var store = new FileSystemResponseStore(TestContext.DeploymentDirectory);
+            using (var handler = new FakeHttpMessageHandler(store))
+            {
+                var client = new GeoCoder(APIKEY.Key, 3, 1000, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
+                await client.GetCoordinate(null, null, null, "55106", "US");
+            }
+        }
 
-            // here we don't want to serialize or include our api key in response lookups so
-            // pass a lambda that will indicate to the serialzier to filter that param out
-            var store = new FileSystemResponseStore(mockFolder, captureFolder);
+        [TestMethod]
+        public async Task ResponseSucceedsAfterRetry()
+        {
+            var store = new FileSystemResponseStore(TestContext.DeploymentDirectory, new RetryCallbacks());
             using (var handler = new FakeHttpMessageHandler(store))
             {
                 var client = new GeoCoder(APIKEY.Key, 4, 1000, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
-                var coord = await client.GetCoordinate(null, null, null, "55106", "US");
+                var result = await client.GetCoordinate(null, null, null, "55106", "US");
 
-                Assert.IsNotNull(coord);
+                Assert.IsNotNull(result);
             }
         }
     }
