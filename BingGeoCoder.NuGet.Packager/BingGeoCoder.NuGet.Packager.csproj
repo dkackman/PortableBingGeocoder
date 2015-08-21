@@ -55,18 +55,17 @@
     <None Include="NuGetSetup.ps1" />
     <None Include="NuGet.exe" />
     <None Include="NuGet.config" />
-    <None Include="Package.nuspec" />
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\" />
+    <Folder Include="lib\" />
     <Folder Include="src\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="lib\BingGeocoder.dll" />
-    <Content Include="lib\BingGeocoder.XML" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

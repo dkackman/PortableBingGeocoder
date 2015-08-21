@@ -43,7 +43,7 @@ namespace GeoCoderTests
             var store = new FileSystemResponseStore(TestContext.DeploymentDirectory);
             using (var handler = new FakeHttpMessageHandler(store))
             {
-                var client = new GeoCoder(APIKEY.Key, 3, 1000, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
+                var client = new GeoCoder(APIKEY.Key, 3, 100, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
                 await client.GetCoordinate(null, null, null, "55106", "US");
             }
         }
@@ -54,7 +54,7 @@ namespace GeoCoderTests
             var store = new FileSystemResponseStore(TestContext.DeploymentDirectory, new RetryCallbacks());
             using (var handler = new FakeHttpMessageHandler(store))
             {
-                var client = new GeoCoder(APIKEY.Key, 4, 1000, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
+                var client = new GeoCoder(APIKEY.Key, 4, 100, "Portable-Bing-GeoCoder-UnitTests/1.0", handler: handler);
                 var result = await client.GetCoordinate(null, null, null, "55106", "US");
 
                 Assert.IsNotNull(result);

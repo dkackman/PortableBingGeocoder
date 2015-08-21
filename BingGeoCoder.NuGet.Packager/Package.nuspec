@@ -7,36 +7,37 @@
     <authors>dkackman</authors>
     <owners>dkackman</owners>
     <description>
-      A Portable Class Library wrapper around Bing's location geocoding Rest services
+      A Portable/Universal Class Library wrapper around Bing's location geocoding Rest services
     </description>
     <releaseNotes>
-      Switch to System.Net.Http client
-      Add retry logic for service busy response header      
+1.0.6      
+  - Switch to System.Net.Http client
+  - Add retry logic for service busy response header      
+1.0.7
+  - Add universal support
     </releaseNotes>
     <summary>
       
     </summary>
     <language>en-US</language>
     <projectUrl>https://github.com/dkackman/PortableBingGeocoder</projectUrl>
-    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/dkackman/DynamicRestProxy/master/nugeticon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <copyright>Copyright Don Kackman 2014</copyright>
     <dependencies>
-      <group targetFramework="portable-windows8+net45+wp8+win8+wpa81+windowsphone8">
-        <dependency id="Newtonsoft.Json" version="6.0.8" />
+      <group targetFramework="portable-net45+netcore45+wpa81+wp8">
+        <dependency id="Newtonsoft.Json" version="7.0.1" />
         <dependency id="Microsoft.Net.Http" version="2.2.29" />
         <dependency id="Microsoft.Bcl" version="1.1.10" />
         <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
-        <dependency id="CommonServiceLocator" version="1.3.0" />
       </group>
     </dependencies>
     <references></references>
-    <tags>Bing Locations Portable Class Library PCL REST GeoCode GeoCoding API</tags>
+    <tags>Bing Locations Portable Class Library PCL REST GeoCode GeoCoding API Universal UAP</tags>
   </metadata>
   <files>
-    <file src="lib\" target="lib" />
-    <file src="tools\" target="tools" />
-    <file src="content\" target="content" />
+    <file src="..\BingGeoCoder\bin\Release\BingGeoCoder.dll" target="lib\portable-net45+netcore45+wpa81+wp8" />
+    <file src="..\BingGeoCoder\bin\Release\BingGeoCoder.xml" target="lib\portable-net45+netcore45+wpa81+wp8" />
   </files>
 </package>
