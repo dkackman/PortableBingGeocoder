@@ -54,6 +54,11 @@
             <param name="value">The value of the uri query parameter</param>
             <returns>True to filter the parameter. False to include in serialization and hashing</returns>
         </member>
+        <member name="P:FakeHttp.IResponseCallbacks.SetHeaderDate">
+            <summary>
+            Flag indicating whether to automatically set the Date header to the current date/time on deserialization
+            </summary>
+        </member>
         <member name="T:FakeHttp.MessageFormatter">
             <summary>
             Base class that formats http request and response message data prior to serialization
@@ -230,6 +235,11 @@
         <member name="M:FakeHttp.ResponseCallbacks.#ctor">
             <summary>
             ctor
+            </summary>
+        </member>
+        <member name="P:FakeHttp.ResponseCallbacks.SetHeaderDate">
+            <summary>
+            Flag indicating whether to automatically set the Date header to the current date/time on deserialization
             </summary>
         </member>
         <member name="M:FakeHttp.ResponseCallbacks.Deserialized(FakeHttp.ResponseInfo,System.IO.Stream)">
