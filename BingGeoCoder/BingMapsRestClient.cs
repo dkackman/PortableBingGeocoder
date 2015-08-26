@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Linq;
 
 using Newtonsoft.Json;
@@ -72,31 +70,32 @@ namespace BingGeocoder
 
         private static string CreateDefaultParameters(string key, string culture, UserContext context)
         {
-            var d = new Dictionary<string, object>();
-
-            d.Add("key", key);
-
+            var d = new Dictionary<string, object>()
+            {
+                { "key", key }
+            };
+            
             if (!string.IsNullOrEmpty(culture))
             {
                 d.Add("c", culture);
             }
 
-            if (context != null)
+            var ip = context?.IPAddress;
+            if (!string.IsNullOrEmpty(ip))
             {
-                if (!string.IsNullOrEmpty(context.IPAddress))
-                {
-                    d.Add("ip", context.IPAddress);
-                }
+                d.Add("ip", ip);
+            }
 
-                if (context.Location != null)
-                {
-                    d.Add("ul", string.Format("{0},{1}", context.Location.Item1, context.Location.Item2));
-                }
+            var location = context?.Location;
+            if (location != null)
+            {
+                d.Add("ul", string.Format("{0},{1}", location.Item1, location.Item2));
+            }
 
-                if (context.MapView != null)
-                {
-                    d.Add("umv", string.Format("{0},{1},{2},{3}", context.MapView.Item1, context.MapView.Item2, context.MapView.Item3, context.MapView.Item4));
-                }
+            var mapView = context?.MapView;
+            if (mapView != null)
+            {
+                d.Add("umv", string.Format("{0},{1},{2},{3}", mapView.Item1, mapView.Item2, mapView.Item3, mapView.Item4));
             }
 
             return d.AsQueryString();

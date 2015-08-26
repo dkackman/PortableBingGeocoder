@@ -44,8 +44,8 @@ namespace BingGeocoder
         /// <param name="apiKey">Bing maps API key https://msdn.microsoft.com/en-us/library/ff428642.aspx </param>
         /// <param name="retryCount">The number of times to retry the request if the Bing maps service indicates it is busy</param>
         /// <param name="retryDelay">The number of milliseconds to wait between retries</param>
-        /// <param name="user_agent">User agnet string</param>
-        /// <param name="culture">Culture of the requesting application</param>
+        /// <param name="user_agent">Optional user agnet string</param>
+        /// <param name="culture">Optional culture of the requesting application</param>
         /// <param name="context">Optional context of the request</param>
         /// <param name="handler">Optional <see cref="HttpMessageHandler"/> to use for communication (mostly for unit testing)</param>
         public GeoCoder(string apiKey, int retryCount, int retryDelay, string user_agent = "", string culture = "en-US", UserContext context = null, HttpMessageHandler handler = null)
