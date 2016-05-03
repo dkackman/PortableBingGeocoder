@@ -82,18 +82,19 @@ namespace BingGeocoder
             return result.GetFirstFormattedAddress();
         }
 
-        public async Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false)
+        public async Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false, string include = "")
         {
-            var result = await GetGeoCodeResult(lat, lon, includeNeighborhood);
+            var result = await GetGeoCodeResult(lat, lon, includeNeighborhood, include);
 
             return result.GetFirstAddress();
         }
 
-        public async Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false)
+        public async Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false, string include = "")
         {
             var parms = new Dictionary<string, object>();
             parms.Add("includeEntityTypes", "Address,Neighborhood,PopulatedPlace,Postcode1,AdminDivision1,AdminDivision2,CountryRegion");
-            parms.Add("inclnb", includeNeighborhood ? "1" : "0");
+            if (includeNeighborhood) parms.Add("inclnb", includeNeighborhood ? "1" : "0");
+            if (!string.IsNullOrWhiteSpace(include)) parms.Add("incl", include);
 
             return await _client.Get<GeoCodeResult>(string.Format("Locations/{0},{1}", lat, lon), parms);
         }

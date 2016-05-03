@@ -49,8 +49,9 @@ namespace BingGeocoder
         /// <param name="lat">Latitude</param>
         /// <param name="lon">Longitude</param>
         /// <param name="includeNeighborhood">Specifies to include the neighborhood in the response when it is available.</param>
+        /// <param name="include">Specifies additional values to include.</param>
         /// <returns>GeoCodeResult</returns>
-        Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false);
+        Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false, string include = "");
 
         /// <summary>
         /// Retreives the GeoCodeResult for the given address
@@ -96,8 +97,9 @@ namespace BingGeocoder
         /// <param name="lat">Latitude</param>
         /// <param name="lon">Longitude</param>
         /// <param name="includeNeighborhood">Specifies to include the neighborhood in the response when it is available.</param>
+        /// <param name="include">Specifies to include the neighborhood in the response when it is available.</param>
         /// <returns>The address of the first result</returns>
-        Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false);
+        Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false, string include = "");
 
         /// <summary>
         /// Retrieves the formatted address for the geo coordinate

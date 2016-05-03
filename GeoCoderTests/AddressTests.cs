@@ -37,6 +37,23 @@ namespace GeoCoderTests
         }
 
         [TestMethod]
+        public async Task GetAddressCISO2()
+        {
+            var address = await _service.GetAddress(44.9108238220215, -93.1702041625977, include: "ciso2");
+
+            Assert.IsNotNull(address);
+            Assert.AreEqual("US", address.countryRegionIso2);
+        }
+
+        //[TestMethod]
+        //public async Task GetAddressPartCISO2()
+        //{
+        //    var countryRegionIso2 = await _service.GetAddressPart(44.9108238220215, -93.1702041625977, "CountryRegion", "ciso2");
+            
+        //    Assert.AreEqual("US", countryRegionIso2);
+        //}
+
+        [TestMethod]
         public async Task RoundtripPostalCode()
         {
             var coord = await _service.GetCoordinate(new Address() { postalCode = "55116", countryRegion = "US" });

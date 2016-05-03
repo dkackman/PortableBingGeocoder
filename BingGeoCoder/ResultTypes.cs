@@ -13,6 +13,7 @@ namespace BingGeocoder
         public string neighborhood { get; set; }
         public string addressLine { get; set; }
         public string landmark { get; set; }
+        public string countryRegionIso2 { get; set; }
     }
 
     public class Point
