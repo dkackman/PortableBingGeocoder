@@ -84,6 +84,7 @@
     <Compile Include="AddressTests.cs" />
     <Compile Include="MockInitialize.cs" />
     <Compile Include="RetryTests.cs" />
+    <Compile Include="ConutryRegionIsoIncludeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BingGeoCoder\BingGeocoder.csproj">

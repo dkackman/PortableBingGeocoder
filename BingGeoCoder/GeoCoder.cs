@@ -150,7 +150,7 @@ namespace BingGeocoder
             return result.GetFirstCoordinate();
         }
 
-        public async Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)
+        public async Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1, string include = "")
         {
             var parms = new Dictionary<string, object>();
             parms.Add("addressLine", addressLine);
@@ -159,13 +159,14 @@ namespace BingGeocoder
             parms.Add("postalCode", postalCode);
             parms.Add("countryRegion", countryRegion);
             parms.Add("maxRes", maxResults);
+            if (!string.IsNullOrWhiteSpace(include)) parms.Add("incl", include);
 
             return await _client.Get<GeoCodeResult>("Locations", parms);
         }
 
-        public async Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1)
+        public async Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1, string include = "")
         {
-            return await GetGeoCodeResult(address.addressLine, address.locality, address.adminDistrict, address.postalCode, address.countryRegion, maxResults);
+            return await GetGeoCodeResult(address.addressLine, address.locality, address.adminDistrict, address.postalCode, address.countryRegion, maxResults, include);
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PortableBingGeoCoder</id>
-    <version>1.0.7</version>
+    <version>2.0.0</version>
     <title>Portable Bing GeoCoder</title>
     <authors>dkackman</authors>
     <owners>dkackman</owners>
@@ -15,6 +15,8 @@
   - Add retry logic for service busy response header      
 1.0.7
   - Add universal support
+2.0.0
+  - Add countryRegionIso2 support to point based lookups
     </releaseNotes>
     <summary>
       

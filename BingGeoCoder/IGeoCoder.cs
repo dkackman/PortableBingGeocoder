@@ -63,7 +63,7 @@ namespace BingGeocoder
         /// <param name="countryRegion">Country part. ex US</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
         /// <returns>GeoCodeResult</returns>
-        Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1);
+        Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1, string include = "");
 
         /// <summary>
         /// Retreives the GeoCodeResult for the given full or partial address
@@ -71,7 +71,7 @@ namespace BingGeocoder
         /// <param name="address">The address</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
         /// <returns>GeoCodeResult</returns>
-        Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1);
+        Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1, string include = "");
         
         /// <summary>
         /// Retreives part of an address at the geo coordinate
