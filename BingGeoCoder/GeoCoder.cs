@@ -106,21 +106,26 @@ namespace BingGeocoder
             return result.GetFirstCoordinate();
         }
 
-        public async Task<GeoCodeResult> Query(string query, int maxResults = 1)
+        public async Task<GeoCodeResult> Query(string query, int maxResults = 1, string include = "")
         {
             var parms = new Dictionary<string, object>();
             parms.Add("q", query.Replace("\n", ", "));
             parms.Add("maxRes", maxResults);
+            if (!string.IsNullOrWhiteSpace(include)) parms.Add("incl", include);
 
             return await _client.Get<GeoCodeResult>("Locations", parms);
         }
 
-        public async Task<Address> ParseAddress(string address)
+        public async Task<Address> ParseAddress(string address, string include = "")
         {
-            var parms = new Dictionary<string, object>();
+            var parms = new Dictionary<string, object>(); 
             parms.Add("q", address.Replace("\n", ", "));
             parms.Add("maxRes", 1);
-            parms.Add("incl", "queryParse");
+
+            if (!string.IsNullOrWhiteSpace(include))
+                parms.Add("incl", include + ",queryParse");
+            else
+                parms.Add("incl", "queryParse");
 
             var result = await _client.Get<GeoCodeResult>("Locations", parms);
             return result.GetFirstAddress();

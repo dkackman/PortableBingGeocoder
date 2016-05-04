@@ -12,8 +12,9 @@ namespace BingGeocoder
         /// Uses the Bing service to attempt to parse an address into its constuent parts
         /// </summary>
         /// <param name="address">The address to parse</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <returns>The parsed address. Null if not successfully parsed by Bing</returns>
-        Task<Address> ParseAddress(string address);
+        Task<Address> ParseAddress(string address, string include = "");
 
         /// <summary>
         /// Retrieves the geo coordinate from detailed address inputs
@@ -49,7 +50,7 @@ namespace BingGeocoder
         /// <param name="lat">Latitude</param>
         /// <param name="lon">Longitude</param>
         /// <param name="includeNeighborhood">Specifies to include the neighborhood in the response when it is available.</param>
-        /// <param name="include">Specifies additional values to include.</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <returns>GeoCodeResult</returns>
         Task<GeoCodeResult> GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false, string include = "");
 
@@ -61,6 +62,7 @@ namespace BingGeocoder
         /// <param name="adminDistrict">State part. ex WA</param>
         /// <param name="postalCode">Postal code part. ex 98052</param>
         /// <param name="countryRegion">Country part. ex US</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
         /// <returns>GeoCodeResult</returns>
         Task<GeoCodeResult> GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1, string include = "");
@@ -70,6 +72,7 @@ namespace BingGeocoder
         /// </summary>
         /// <param name="address">The address</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <returns>GeoCodeResult</returns>
         Task<GeoCodeResult> GetGeoCodeResult(Address address, int maxResults = 1, string include = "");
         
@@ -97,7 +100,7 @@ namespace BingGeocoder
         /// <param name="lat">Latitude</param>
         /// <param name="lon">Longitude</param>
         /// <param name="includeNeighborhood">Specifies to include the neighborhood in the response when it is available.</param>
-        /// <param name="include">Specifies to include the neighborhood in the response when it is available.</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <returns>The address of the first result</returns>
         Task<Address> GetAddress(double lat, double lon, bool includeNeighborhood = false, string include = "");
 
@@ -114,8 +117,9 @@ namespace BingGeocoder
         /// </summary>
         /// <param name="query">The location query</param>
         /// <param name="maxResults">The maximum number of results to return. Defaults to 1</param>
+        /// <param name="include">Specifies additional values to include. Use "ciso2" to include the ISO country code</param>
         /// <returns>GeoCodeResult</returns>
-        Task<GeoCodeResult> Query(string query, int maxResults = 1);
+        Task<GeoCodeResult> Query(string query, int maxResults = 1, string include = "");
 
         /// <summary>
         /// Retrieves the geo coordinate of a location, such as an address or landmark name.

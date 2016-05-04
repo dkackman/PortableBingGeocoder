@@ -10,13 +10,13 @@
       A Portable/Universal Class Library wrapper around Bing's location geocoding Rest services
     </description>
     <releaseNotes>
-1.0.6      
-  - Switch to System.Net.Http client
-  - Add retry logic for service busy response header      
-1.0.7
-  - Add universal support
-2.0.0
-  - Add countryRegionIso2 support to point based lookups
+      1.0.6
+      - Switch to System.Net.Http client
+      - Add retry logic for service busy response header
+      1.0.7
+      - Add universal support
+      2.0.0
+      - Add countryRegionIso2 support https://github.com/dkackman/PortableBingGeocoder/issues/3
     </releaseNotes>
     <summary>
       

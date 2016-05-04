@@ -88,5 +88,17 @@ namespace GeoCoderTests
             Assert.IsTrue(coord.Item1.AboutEqual(48.858600616455078));
             Assert.IsTrue(coord.Item2.AboutEqual(2.2939798831939697));
         }
+
+        [TestMethod]
+        public async Task QueryLandmark()
+        {
+            var result = await _service.Query("tower of london");
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.resourceSets.Count > 0);
+            Assert.IsTrue(result.resourceSets[0].resources.Count > 0);
+
+            Assert.AreEqual("Tower of London, United Kingdom", result.resourceSets[0].resources[0].address.formattedAddress);
+        }
     }
 }

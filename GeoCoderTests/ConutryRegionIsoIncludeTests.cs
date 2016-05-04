@@ -28,7 +28,7 @@ namespace GeoCoderTests
         }
 
         [TestMethod]
-        public async Task GetAddressCISO2()
+        public async Task CISO2GetAddress()
         {
             var address = await _service.GetAddress(44.9108238220215, -93.1702041625977, include: "ciso2");
 
@@ -37,7 +37,7 @@ namespace GeoCoderTests
         }
 
         [TestMethod]
-        public async Task GetGeoCodeResultCISO2()
+        public async Task CISO2GetGeoCodeResult()
         {
             var result = await _service.GetGeoCodeResult("One Microsoft Way", "Redmond", "WA", "98052", "US", include: "ciso2");
 
@@ -48,5 +48,24 @@ namespace GeoCoderTests
             Assert.AreEqual("US", result.resourceSets[0].resources[0].address.countryRegionIso2 = "US");
         }
 
+        [TestMethod]
+        public async Task CISO2ParseAnAddress()
+        {
+            var address = await _service.ParseAddress("One Microsoft Way, Redmond, WA 98052", "ciso2");
+
+            Assert.AreEqual("US", address.countryRegionIso2);
+        }
+
+        [TestMethod]
+        public async Task CISO2QueryLandmark()
+        {
+            var result = await _service.Query("tower of london", 1, "ciso2");
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.resourceSets.Count > 0);
+            Assert.IsTrue(result.resourceSets[0].resources.Count > 0);
+
+            Assert.AreEqual("GB", result.resourceSets[0].resources[0].address.countryRegionIso2);
+        }
     }
 }
