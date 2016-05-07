@@ -45,7 +45,7 @@ namespace GeoCoderTests
             Assert.IsTrue(result.resourceSets.Count > 0);
             Assert.IsTrue(result.resourceSets[0].resources.Count > 0);
 
-            Assert.AreEqual("US", result.resourceSets[0].resources[0].address.countryRegionIso2 = "US");
+            Assert.AreEqual("US", result.resourceSets[0].resources[0].address.countryRegionIso2);
         }
 
         [TestMethod]
