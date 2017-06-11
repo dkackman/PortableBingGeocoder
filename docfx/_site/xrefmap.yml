@@ -1,0 +1,975 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: BingGeocoder
+  name: BingGeocoder
+  href: api/BingGeocoder.html
+  commentId: N:BingGeocoder
+  fullName: BingGeocoder
+  nameWithType: BingGeocoder
+- uid: BingGeocoder.Address
+  name: Address
+  href: api/BingGeocoder.Address.html
+  commentId: T:BingGeocoder.Address
+  fullName: BingGeocoder.Address
+  nameWithType: Address
+- uid: BingGeocoder.Address.addressLine
+  name: addressLine
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_addressLine
+  commentId: P:BingGeocoder.Address.addressLine
+  fullName: BingGeocoder.Address.addressLine
+  nameWithType: Address.addressLine
+- uid: BingGeocoder.Address.addressLine*
+  name: addressLine
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_addressLine_
+  commentId: Overload:BingGeocoder.Address.addressLine
+  fullName: BingGeocoder.Address.addressLine
+  nameWithType: Address.addressLine
+- uid: BingGeocoder.Address.adminDistrict
+  name: adminDistrict
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_adminDistrict
+  commentId: P:BingGeocoder.Address.adminDistrict
+  fullName: BingGeocoder.Address.adminDistrict
+  nameWithType: Address.adminDistrict
+- uid: BingGeocoder.Address.adminDistrict*
+  name: adminDistrict
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_adminDistrict_
+  commentId: Overload:BingGeocoder.Address.adminDistrict
+  fullName: BingGeocoder.Address.adminDistrict
+  nameWithType: Address.adminDistrict
+- uid: BingGeocoder.Address.adminDistrict2
+  name: adminDistrict2
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_adminDistrict2
+  commentId: P:BingGeocoder.Address.adminDistrict2
+  fullName: BingGeocoder.Address.adminDistrict2
+  nameWithType: Address.adminDistrict2
+- uid: BingGeocoder.Address.adminDistrict2*
+  name: adminDistrict2
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_adminDistrict2_
+  commentId: Overload:BingGeocoder.Address.adminDistrict2
+  fullName: BingGeocoder.Address.adminDistrict2
+  nameWithType: Address.adminDistrict2
+- uid: BingGeocoder.Address.countryRegion
+  name: countryRegion
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_countryRegion
+  commentId: P:BingGeocoder.Address.countryRegion
+  fullName: BingGeocoder.Address.countryRegion
+  nameWithType: Address.countryRegion
+- uid: BingGeocoder.Address.countryRegion*
+  name: countryRegion
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_countryRegion_
+  commentId: Overload:BingGeocoder.Address.countryRegion
+  fullName: BingGeocoder.Address.countryRegion
+  nameWithType: Address.countryRegion
+- uid: BingGeocoder.Address.countryRegionIso2
+  name: countryRegionIso2
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_countryRegionIso2
+  commentId: P:BingGeocoder.Address.countryRegionIso2
+  fullName: BingGeocoder.Address.countryRegionIso2
+  nameWithType: Address.countryRegionIso2
+- uid: BingGeocoder.Address.countryRegionIso2*
+  name: countryRegionIso2
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_countryRegionIso2_
+  commentId: Overload:BingGeocoder.Address.countryRegionIso2
+  fullName: BingGeocoder.Address.countryRegionIso2
+  nameWithType: Address.countryRegionIso2
+- uid: BingGeocoder.Address.formattedAddress
+  name: formattedAddress
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_formattedAddress
+  commentId: P:BingGeocoder.Address.formattedAddress
+  fullName: BingGeocoder.Address.formattedAddress
+  nameWithType: Address.formattedAddress
+- uid: BingGeocoder.Address.formattedAddress*
+  name: formattedAddress
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_formattedAddress_
+  commentId: Overload:BingGeocoder.Address.formattedAddress
+  fullName: BingGeocoder.Address.formattedAddress
+  nameWithType: Address.formattedAddress
+- uid: BingGeocoder.Address.landmark
+  name: landmark
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_landmark
+  commentId: P:BingGeocoder.Address.landmark
+  fullName: BingGeocoder.Address.landmark
+  nameWithType: Address.landmark
+- uid: BingGeocoder.Address.landmark*
+  name: landmark
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_landmark_
+  commentId: Overload:BingGeocoder.Address.landmark
+  fullName: BingGeocoder.Address.landmark
+  nameWithType: Address.landmark
+- uid: BingGeocoder.Address.locality
+  name: locality
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_locality
+  commentId: P:BingGeocoder.Address.locality
+  fullName: BingGeocoder.Address.locality
+  nameWithType: Address.locality
+- uid: BingGeocoder.Address.locality*
+  name: locality
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_locality_
+  commentId: Overload:BingGeocoder.Address.locality
+  fullName: BingGeocoder.Address.locality
+  nameWithType: Address.locality
+- uid: BingGeocoder.Address.neighborhood
+  name: neighborhood
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_neighborhood
+  commentId: P:BingGeocoder.Address.neighborhood
+  fullName: BingGeocoder.Address.neighborhood
+  nameWithType: Address.neighborhood
+- uid: BingGeocoder.Address.neighborhood*
+  name: neighborhood
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_neighborhood_
+  commentId: Overload:BingGeocoder.Address.neighborhood
+  fullName: BingGeocoder.Address.neighborhood
+  nameWithType: Address.neighborhood
+- uid: BingGeocoder.Address.postalCode
+  name: postalCode
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_postalCode
+  commentId: P:BingGeocoder.Address.postalCode
+  fullName: BingGeocoder.Address.postalCode
+  nameWithType: Address.postalCode
+- uid: BingGeocoder.Address.postalCode*
+  name: postalCode
+  href: api/BingGeocoder.Address.html#BingGeocoder_Address_postalCode_
+  commentId: Overload:BingGeocoder.Address.postalCode
+  fullName: BingGeocoder.Address.postalCode
+  nameWithType: Address.postalCode
+- uid: BingGeocoder.AddressEntityType
+  name: AddressEntityType
+  href: api/BingGeocoder.AddressEntityType.html
+  commentId: T:BingGeocoder.AddressEntityType
+  fullName: BingGeocoder.AddressEntityType
+  nameWithType: AddressEntityType
+- uid: BingGeocoder.AddressEntityType.Address
+  name: Address
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_Address
+  commentId: F:BingGeocoder.AddressEntityType.Address
+  fullName: BingGeocoder.AddressEntityType.Address
+  nameWithType: AddressEntityType.Address
+- uid: BingGeocoder.AddressEntityType.AdminDivision1
+  name: AdminDivision1
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_AdminDivision1
+  commentId: F:BingGeocoder.AddressEntityType.AdminDivision1
+  fullName: BingGeocoder.AddressEntityType.AdminDivision1
+  nameWithType: AddressEntityType.AdminDivision1
+- uid: BingGeocoder.AddressEntityType.AdminDivision2
+  name: AdminDivision2
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_AdminDivision2
+  commentId: F:BingGeocoder.AddressEntityType.AdminDivision2
+  fullName: BingGeocoder.AddressEntityType.AdminDivision2
+  nameWithType: AddressEntityType.AdminDivision2
+- uid: BingGeocoder.AddressEntityType.CountryRegion
+  name: CountryRegion
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_CountryRegion
+  commentId: F:BingGeocoder.AddressEntityType.CountryRegion
+  fullName: BingGeocoder.AddressEntityType.CountryRegion
+  nameWithType: AddressEntityType.CountryRegion
+- uid: BingGeocoder.AddressEntityType.Neighborhood
+  name: Neighborhood
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_Neighborhood
+  commentId: F:BingGeocoder.AddressEntityType.Neighborhood
+  fullName: BingGeocoder.AddressEntityType.Neighborhood
+  nameWithType: AddressEntityType.Neighborhood
+- uid: BingGeocoder.AddressEntityType.PopulatedPlace
+  name: PopulatedPlace
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_PopulatedPlace
+  commentId: F:BingGeocoder.AddressEntityType.PopulatedPlace
+  fullName: BingGeocoder.AddressEntityType.PopulatedPlace
+  nameWithType: AddressEntityType.PopulatedPlace
+- uid: BingGeocoder.AddressEntityType.Postcode1
+  name: Postcode1
+  href: api/BingGeocoder.AddressEntityType.html#BingGeocoder_AddressEntityType_Postcode1
+  commentId: F:BingGeocoder.AddressEntityType.Postcode1
+  fullName: BingGeocoder.AddressEntityType.Postcode1
+  nameWithType: AddressEntityType.Postcode1
+- uid: BingGeocoder.GeocodePoint
+  name: GeocodePoint
+  href: api/BingGeocoder.GeocodePoint.html
+  commentId: T:BingGeocoder.GeocodePoint
+  fullName: BingGeocoder.GeocodePoint
+  nameWithType: GeocodePoint
+- uid: BingGeocoder.GeocodePoint.calculationMethod
+  name: calculationMethod
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_calculationMethod
+  commentId: P:BingGeocoder.GeocodePoint.calculationMethod
+  fullName: BingGeocoder.GeocodePoint.calculationMethod
+  nameWithType: GeocodePoint.calculationMethod
+- uid: BingGeocoder.GeocodePoint.calculationMethod*
+  name: calculationMethod
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_calculationMethod_
+  commentId: Overload:BingGeocoder.GeocodePoint.calculationMethod
+  fullName: BingGeocoder.GeocodePoint.calculationMethod
+  nameWithType: GeocodePoint.calculationMethod
+- uid: BingGeocoder.GeocodePoint.coordinates
+  name: coordinates
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_coordinates
+  commentId: P:BingGeocoder.GeocodePoint.coordinates
+  fullName: BingGeocoder.GeocodePoint.coordinates
+  nameWithType: GeocodePoint.coordinates
+- uid: BingGeocoder.GeocodePoint.coordinates*
+  name: coordinates
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_coordinates_
+  commentId: Overload:BingGeocoder.GeocodePoint.coordinates
+  fullName: BingGeocoder.GeocodePoint.coordinates
+  nameWithType: GeocodePoint.coordinates
+- uid: BingGeocoder.GeocodePoint.type
+  name: type
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_type
+  commentId: P:BingGeocoder.GeocodePoint.type
+  fullName: BingGeocoder.GeocodePoint.type
+  nameWithType: GeocodePoint.type
+- uid: BingGeocoder.GeocodePoint.type*
+  name: type
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_type_
+  commentId: Overload:BingGeocoder.GeocodePoint.type
+  fullName: BingGeocoder.GeocodePoint.type
+  nameWithType: GeocodePoint.type
+- uid: BingGeocoder.GeocodePoint.usageTypes
+  name: usageTypes
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_usageTypes
+  commentId: P:BingGeocoder.GeocodePoint.usageTypes
+  fullName: BingGeocoder.GeocodePoint.usageTypes
+  nameWithType: GeocodePoint.usageTypes
+- uid: BingGeocoder.GeocodePoint.usageTypes*
+  name: usageTypes
+  href: api/BingGeocoder.GeocodePoint.html#BingGeocoder_GeocodePoint_usageTypes_
+  commentId: Overload:BingGeocoder.GeocodePoint.usageTypes
+  fullName: BingGeocoder.GeocodePoint.usageTypes
+  nameWithType: GeocodePoint.usageTypes
+- uid: BingGeocoder.GeoCoder
+  name: GeoCoder
+  href: api/BingGeocoder.GeoCoder.html
+  commentId: T:BingGeocoder.GeoCoder
+  fullName: BingGeocoder.GeoCoder
+  nameWithType: GeoCoder
+- uid: BingGeocoder.GeoCoder.#ctor(System.String,System.Int32,System.Int32,System.String,System.String,BingGeocoder.UserContext)
+  name: GeoCoder(String, Int32, Int32, String, String, UserContext)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder__ctor_System_String_System_Int32_System_Int32_System_String_System_String_BingGeocoder_UserContext_
+  commentId: M:BingGeocoder.GeoCoder.#ctor(System.String,System.Int32,System.Int32,System.String,System.String,BingGeocoder.UserContext)
+  fullName: BingGeocoder.GeoCoder.GeoCoder(System.String, System.Int32, System.Int32, System.String, System.String, BingGeocoder.UserContext)
+  nameWithType: GeoCoder.GeoCoder(String, Int32, Int32, String, String, UserContext)
+- uid: BingGeocoder.GeoCoder.#ctor(System.String,System.Int32,System.Int32,System.String,System.String,BingGeocoder.UserContext,System.Net.Http.HttpMessageHandler)
+  name: GeoCoder(String, Int32, Int32, String, String, UserContext, HttpMessageHandler)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder__ctor_System_String_System_Int32_System_Int32_System_String_System_String_BingGeocoder_UserContext_System_Net_Http_HttpMessageHandler_
+  commentId: M:BingGeocoder.GeoCoder.#ctor(System.String,System.Int32,System.Int32,System.String,System.String,BingGeocoder.UserContext,System.Net.Http.HttpMessageHandler)
+  fullName: BingGeocoder.GeoCoder.GeoCoder(System.String, System.Int32, System.Int32, System.String, System.String, BingGeocoder.UserContext, System.Net.Http.HttpMessageHandler)
+  nameWithType: GeoCoder.GeoCoder(String, Int32, Int32, String, String, UserContext, HttpMessageHandler)
+- uid: BingGeocoder.GeoCoder.#ctor(System.String,System.String,System.String,BingGeocoder.UserContext)
+  name: GeoCoder(String, String, String, UserContext)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder__ctor_System_String_System_String_System_String_BingGeocoder_UserContext_
+  commentId: M:BingGeocoder.GeoCoder.#ctor(System.String,System.String,System.String,BingGeocoder.UserContext)
+  fullName: BingGeocoder.GeoCoder.GeoCoder(System.String, System.String, System.String, BingGeocoder.UserContext)
+  nameWithType: GeoCoder.GeoCoder(String, String, String, UserContext)
+- uid: BingGeocoder.GeoCoder.#ctor*
+  name: GeoCoder
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder__ctor_
+  commentId: Overload:BingGeocoder.GeoCoder.#ctor
+  fullName: BingGeocoder.GeoCoder.GeoCoder
+  nameWithType: GeoCoder.GeoCoder
+- uid: BingGeocoder.GeoCoder.Dispose
+  name: Dispose()
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_Dispose
+  commentId: M:BingGeocoder.GeoCoder.Dispose
+  fullName: BingGeocoder.GeoCoder.Dispose()
+  nameWithType: GeoCoder.Dispose()
+- uid: BingGeocoder.GeoCoder.Dispose*
+  name: Dispose
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_Dispose_
+  commentId: Overload:BingGeocoder.GeoCoder.Dispose
+  fullName: BingGeocoder.GeoCoder.Dispose
+  nameWithType: GeoCoder.Dispose
+- uid: BingGeocoder.GeoCoder.GetAddress(System.Double,System.Double,System.Boolean,System.String)
+  name: GetAddress(Double, Double, Boolean, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetAddress_System_Double_System_Double_System_Boolean_System_String_
+  commentId: M:BingGeocoder.GeoCoder.GetAddress(System.Double,System.Double,System.Boolean,System.String)
+  fullName: BingGeocoder.GeoCoder.GetAddress(System.Double, System.Double, System.Boolean, System.String)
+  nameWithType: GeoCoder.GetAddress(Double, Double, Boolean, String)
+- uid: BingGeocoder.GeoCoder.GetAddress*
+  name: GetAddress
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetAddress_
+  commentId: Overload:BingGeocoder.GeoCoder.GetAddress
+  fullName: BingGeocoder.GeoCoder.GetAddress
+  nameWithType: GeoCoder.GetAddress
+- uid: BingGeocoder.GeoCoder.GetAddressPart(System.Double,System.Double,BingGeocoder.AddressEntityType)
+  name: GetAddressPart(Double, Double, AddressEntityType)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetAddressPart_System_Double_System_Double_BingGeocoder_AddressEntityType_
+  commentId: M:BingGeocoder.GeoCoder.GetAddressPart(System.Double,System.Double,BingGeocoder.AddressEntityType)
+  fullName: BingGeocoder.GeoCoder.GetAddressPart(System.Double, System.Double, BingGeocoder.AddressEntityType)
+  nameWithType: GeoCoder.GetAddressPart(Double, Double, AddressEntityType)
+- uid: BingGeocoder.GeoCoder.GetAddressPart(System.Double,System.Double,System.String)
+  name: GetAddressPart(Double, Double, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetAddressPart_System_Double_System_Double_System_String_
+  commentId: M:BingGeocoder.GeoCoder.GetAddressPart(System.Double,System.Double,System.String)
+  fullName: BingGeocoder.GeoCoder.GetAddressPart(System.Double, System.Double, System.String)
+  nameWithType: GeoCoder.GetAddressPart(Double, Double, String)
+- uid: BingGeocoder.GeoCoder.GetAddressPart*
+  name: GetAddressPart
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetAddressPart_
+  commentId: Overload:BingGeocoder.GeoCoder.GetAddressPart
+  fullName: BingGeocoder.GeoCoder.GetAddressPart
+  nameWithType: GeoCoder.GetAddressPart
+- uid: BingGeocoder.GeoCoder.GetCoordinate(BingGeocoder.Address,System.Int32)
+  name: GetCoordinate(Address, Int32)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetCoordinate_BingGeocoder_Address_System_Int32_
+  commentId: M:BingGeocoder.GeoCoder.GetCoordinate(BingGeocoder.Address,System.Int32)
+  fullName: BingGeocoder.GeoCoder.GetCoordinate(BingGeocoder.Address, System.Int32)
+  nameWithType: GeoCoder.GetCoordinate(Address, Int32)
+- uid: BingGeocoder.GeoCoder.GetCoordinate(System.String,System.Int32)
+  name: GetCoordinate(String, Int32)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetCoordinate_System_String_System_Int32_
+  commentId: M:BingGeocoder.GeoCoder.GetCoordinate(System.String,System.Int32)
+  fullName: BingGeocoder.GeoCoder.GetCoordinate(System.String, System.Int32)
+  nameWithType: GeoCoder.GetCoordinate(String, Int32)
+- uid: BingGeocoder.GeoCoder.GetCoordinate(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  name: GetCoordinate(String, String, String, String, String, Int32)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetCoordinate_System_String_System_String_System_String_System_String_System_String_System_Int32_
+  commentId: M:BingGeocoder.GeoCoder.GetCoordinate(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  fullName: BingGeocoder.GeoCoder.GetCoordinate(System.String, System.String, System.String, System.String, System.String, System.Int32)
+  nameWithType: GeoCoder.GetCoordinate(String, String, String, String, String, Int32)
+- uid: BingGeocoder.GeoCoder.GetCoordinate*
+  name: GetCoordinate
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetCoordinate_
+  commentId: Overload:BingGeocoder.GeoCoder.GetCoordinate
+  fullName: BingGeocoder.GeoCoder.GetCoordinate
+  nameWithType: GeoCoder.GetCoordinate
+- uid: BingGeocoder.GeoCoder.GetFormattedAddress(System.Double,System.Double)
+  name: GetFormattedAddress(Double, Double)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetFormattedAddress_System_Double_System_Double_
+  commentId: M:BingGeocoder.GeoCoder.GetFormattedAddress(System.Double,System.Double)
+  fullName: BingGeocoder.GeoCoder.GetFormattedAddress(System.Double, System.Double)
+  nameWithType: GeoCoder.GetFormattedAddress(Double, Double)
+- uid: BingGeocoder.GeoCoder.GetFormattedAddress*
+  name: GetFormattedAddress
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetFormattedAddress_
+  commentId: Overload:BingGeocoder.GeoCoder.GetFormattedAddress
+  fullName: BingGeocoder.GeoCoder.GetFormattedAddress
+  nameWithType: GeoCoder.GetFormattedAddress
+- uid: BingGeocoder.GeoCoder.GetGeoCodeResult(BingGeocoder.Address,System.Int32,System.String)
+  name: GetGeoCodeResult(Address, Int32, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetGeoCodeResult_BingGeocoder_Address_System_Int32_System_String_
+  commentId: M:BingGeocoder.GeoCoder.GetGeoCodeResult(BingGeocoder.Address,System.Int32,System.String)
+  fullName: BingGeocoder.GeoCoder.GetGeoCodeResult(BingGeocoder.Address, System.Int32, System.String)
+  nameWithType: GeoCoder.GetGeoCodeResult(Address, Int32, String)
+- uid: BingGeocoder.GeoCoder.GetGeoCodeResult(System.Double,System.Double,System.Boolean,System.String)
+  name: GetGeoCodeResult(Double, Double, Boolean, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetGeoCodeResult_System_Double_System_Double_System_Boolean_System_String_
+  commentId: M:BingGeocoder.GeoCoder.GetGeoCodeResult(System.Double,System.Double,System.Boolean,System.String)
+  fullName: BingGeocoder.GeoCoder.GetGeoCodeResult(System.Double, System.Double, System.Boolean, System.String)
+  nameWithType: GeoCoder.GetGeoCodeResult(Double, Double, Boolean, String)
+- uid: BingGeocoder.GeoCoder.GetGeoCodeResult(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)
+  name: GetGeoCodeResult(String, String, String, String, String, Int32, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetGeoCodeResult_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_
+  commentId: M:BingGeocoder.GeoCoder.GetGeoCodeResult(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)
+  fullName: BingGeocoder.GeoCoder.GetGeoCodeResult(System.String, System.String, System.String, System.String, System.String, System.Int32, System.String)
+  nameWithType: GeoCoder.GetGeoCodeResult(String, String, String, String, String, Int32, String)
+- uid: BingGeocoder.GeoCoder.GetGeoCodeResult*
+  name: GetGeoCodeResult
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_GetGeoCodeResult_
+  commentId: Overload:BingGeocoder.GeoCoder.GetGeoCodeResult
+  fullName: BingGeocoder.GeoCoder.GetGeoCodeResult
+  nameWithType: GeoCoder.GetGeoCodeResult
+- uid: BingGeocoder.GeoCoder.ParseAddress(System.String,System.String)
+  name: ParseAddress(String, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_ParseAddress_System_String_System_String_
+  commentId: M:BingGeocoder.GeoCoder.ParseAddress(System.String,System.String)
+  fullName: BingGeocoder.GeoCoder.ParseAddress(System.String, System.String)
+  nameWithType: GeoCoder.ParseAddress(String, String)
+- uid: BingGeocoder.GeoCoder.ParseAddress*
+  name: ParseAddress
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_ParseAddress_
+  commentId: Overload:BingGeocoder.GeoCoder.ParseAddress
+  fullName: BingGeocoder.GeoCoder.ParseAddress
+  nameWithType: GeoCoder.ParseAddress
+- uid: BingGeocoder.GeoCoder.Query(System.String,System.Int32,System.String)
+  name: Query(String, Int32, String)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_Query_System_String_System_Int32_System_String_
+  commentId: M:BingGeocoder.GeoCoder.Query(System.String,System.Int32,System.String)
+  fullName: BingGeocoder.GeoCoder.Query(System.String, System.Int32, System.String)
+  nameWithType: GeoCoder.Query(String, Int32, String)
+- uid: BingGeocoder.GeoCoder.Query*
+  name: Query
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_Query_
+  commentId: Overload:BingGeocoder.GeoCoder.Query
+  fullName: BingGeocoder.GeoCoder.Query
+  nameWithType: GeoCoder.Query
+- uid: BingGeocoder.GeoCoder.QueryCoordinate(System.String,System.Int32)
+  name: QueryCoordinate(String, Int32)
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_QueryCoordinate_System_String_System_Int32_
+  commentId: M:BingGeocoder.GeoCoder.QueryCoordinate(System.String,System.Int32)
+  fullName: BingGeocoder.GeoCoder.QueryCoordinate(System.String, System.Int32)
+  nameWithType: GeoCoder.QueryCoordinate(String, Int32)
+- uid: BingGeocoder.GeoCoder.QueryCoordinate*
+  name: QueryCoordinate
+  href: api/BingGeocoder.GeoCoder.html#BingGeocoder_GeoCoder_QueryCoordinate_
+  commentId: Overload:BingGeocoder.GeoCoder.QueryCoordinate
+  fullName: BingGeocoder.GeoCoder.QueryCoordinate
+  nameWithType: GeoCoder.QueryCoordinate
+- uid: BingGeocoder.GeoCodeResult
+  name: GeoCodeResult
+  href: api/BingGeocoder.GeoCodeResult.html
+  commentId: T:BingGeocoder.GeoCodeResult
+  fullName: BingGeocoder.GeoCodeResult
+  nameWithType: GeoCodeResult
+- uid: BingGeocoder.GeoCodeResult.authenticationResultCode
+  name: authenticationResultCode
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_authenticationResultCode
+  commentId: P:BingGeocoder.GeoCodeResult.authenticationResultCode
+  fullName: BingGeocoder.GeoCodeResult.authenticationResultCode
+  nameWithType: GeoCodeResult.authenticationResultCode
+- uid: BingGeocoder.GeoCodeResult.authenticationResultCode*
+  name: authenticationResultCode
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_authenticationResultCode_
+  commentId: Overload:BingGeocoder.GeoCodeResult.authenticationResultCode
+  fullName: BingGeocoder.GeoCodeResult.authenticationResultCode
+  nameWithType: GeoCodeResult.authenticationResultCode
+- uid: BingGeocoder.GeoCodeResult.brandLogoUri
+  name: brandLogoUri
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_brandLogoUri
+  commentId: P:BingGeocoder.GeoCodeResult.brandLogoUri
+  fullName: BingGeocoder.GeoCodeResult.brandLogoUri
+  nameWithType: GeoCodeResult.brandLogoUri
+- uid: BingGeocoder.GeoCodeResult.brandLogoUri*
+  name: brandLogoUri
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_brandLogoUri_
+  commentId: Overload:BingGeocoder.GeoCodeResult.brandLogoUri
+  fullName: BingGeocoder.GeoCodeResult.brandLogoUri
+  nameWithType: GeoCodeResult.brandLogoUri
+- uid: BingGeocoder.GeoCodeResult.copyright
+  name: copyright
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_copyright
+  commentId: P:BingGeocoder.GeoCodeResult.copyright
+  fullName: BingGeocoder.GeoCodeResult.copyright
+  nameWithType: GeoCodeResult.copyright
+- uid: BingGeocoder.GeoCodeResult.copyright*
+  name: copyright
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_copyright_
+  commentId: Overload:BingGeocoder.GeoCodeResult.copyright
+  fullName: BingGeocoder.GeoCodeResult.copyright
+  nameWithType: GeoCodeResult.copyright
+- uid: BingGeocoder.GeoCodeResult.resourceSets
+  name: resourceSets
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_resourceSets
+  commentId: P:BingGeocoder.GeoCodeResult.resourceSets
+  fullName: BingGeocoder.GeoCodeResult.resourceSets
+  nameWithType: GeoCodeResult.resourceSets
+- uid: BingGeocoder.GeoCodeResult.resourceSets*
+  name: resourceSets
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_resourceSets_
+  commentId: Overload:BingGeocoder.GeoCodeResult.resourceSets
+  fullName: BingGeocoder.GeoCodeResult.resourceSets
+  nameWithType: GeoCodeResult.resourceSets
+- uid: BingGeocoder.GeoCodeResult.statusCode
+  name: statusCode
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_statusCode
+  commentId: P:BingGeocoder.GeoCodeResult.statusCode
+  fullName: BingGeocoder.GeoCodeResult.statusCode
+  nameWithType: GeoCodeResult.statusCode
+- uid: BingGeocoder.GeoCodeResult.statusCode*
+  name: statusCode
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_statusCode_
+  commentId: Overload:BingGeocoder.GeoCodeResult.statusCode
+  fullName: BingGeocoder.GeoCodeResult.statusCode
+  nameWithType: GeoCodeResult.statusCode
+- uid: BingGeocoder.GeoCodeResult.statusDescription
+  name: statusDescription
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_statusDescription
+  commentId: P:BingGeocoder.GeoCodeResult.statusDescription
+  fullName: BingGeocoder.GeoCodeResult.statusDescription
+  nameWithType: GeoCodeResult.statusDescription
+- uid: BingGeocoder.GeoCodeResult.statusDescription*
+  name: statusDescription
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_statusDescription_
+  commentId: Overload:BingGeocoder.GeoCodeResult.statusDescription
+  fullName: BingGeocoder.GeoCodeResult.statusDescription
+  nameWithType: GeoCodeResult.statusDescription
+- uid: BingGeocoder.GeoCodeResult.traceId
+  name: traceId
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_traceId
+  commentId: P:BingGeocoder.GeoCodeResult.traceId
+  fullName: BingGeocoder.GeoCodeResult.traceId
+  nameWithType: GeoCodeResult.traceId
+- uid: BingGeocoder.GeoCodeResult.traceId*
+  name: traceId
+  href: api/BingGeocoder.GeoCodeResult.html#BingGeocoder_GeoCodeResult_traceId_
+  commentId: Overload:BingGeocoder.GeoCodeResult.traceId
+  fullName: BingGeocoder.GeoCodeResult.traceId
+  nameWithType: GeoCodeResult.traceId
+- uid: BingGeocoder.GeoResultExtensions
+  name: GeoResultExtensions
+  href: api/BingGeocoder.GeoResultExtensions.html
+  commentId: T:BingGeocoder.GeoResultExtensions
+  fullName: BingGeocoder.GeoResultExtensions
+  nameWithType: GeoResultExtensions
+- uid: BingGeocoder.GeoResultExtensions.GetAddresses(BingGeocoder.GeoCodeResult)
+  name: GetAddresses(GeoCodeResult)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetAddresses_BingGeocoder_GeoCodeResult_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetAddresses(BingGeocoder.GeoCodeResult)
+  fullName: BingGeocoder.GeoResultExtensions.GetAddresses(BingGeocoder.GeoCodeResult)
+  nameWithType: GeoResultExtensions.GetAddresses(GeoCodeResult)
+- uid: BingGeocoder.GeoResultExtensions.GetAddresses*
+  name: GetAddresses
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetAddresses_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetAddresses
+  fullName: BingGeocoder.GeoResultExtensions.GetAddresses
+  nameWithType: GeoResultExtensions.GetAddresses
+- uid: BingGeocoder.GeoResultExtensions.GetCoordinates(BingGeocoder.GeoCodeResult)
+  name: GetCoordinates(GeoCodeResult)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetCoordinates_BingGeocoder_GeoCodeResult_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetCoordinates(BingGeocoder.GeoCodeResult)
+  fullName: BingGeocoder.GeoResultExtensions.GetCoordinates(BingGeocoder.GeoCodeResult)
+  nameWithType: GeoResultExtensions.GetCoordinates(GeoCodeResult)
+- uid: BingGeocoder.GeoResultExtensions.GetCoordinates*
+  name: GetCoordinates
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetCoordinates_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetCoordinates
+  fullName: BingGeocoder.GeoResultExtensions.GetCoordinates
+  nameWithType: GeoResultExtensions.GetCoordinates
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddress(BingGeocoder.GeoCodeResult)
+  name: GetFirstAddress(GeoCodeResult)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddress_BingGeocoder_GeoCodeResult_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetFirstAddress(BingGeocoder.GeoCodeResult)
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddress(BingGeocoder.GeoCodeResult)
+  nameWithType: GeoResultExtensions.GetFirstAddress(GeoCodeResult)
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddress*
+  name: GetFirstAddress
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddress_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetFirstAddress
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddress
+  nameWithType: GeoResultExtensions.GetFirstAddress
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddressPart(BingGeocoder.GeoCodeResult,System.String)
+  name: GetFirstAddressPart(GeoCodeResult, String)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddressPart_BingGeocoder_GeoCodeResult_System_String_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetFirstAddressPart(BingGeocoder.GeoCodeResult,System.String)
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddressPart(BingGeocoder.GeoCodeResult, System.String)
+  nameWithType: GeoResultExtensions.GetFirstAddressPart(GeoCodeResult, String)
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddressPart*
+  name: GetFirstAddressPart
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddressPart_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetFirstAddressPart
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddressPart
+  nameWithType: GeoResultExtensions.GetFirstAddressPart
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddressProperty(BingGeocoder.GeoCodeResult,System.Func{BingGeocoder.Address,System.String})
+  name: GetFirstAddressProperty(GeoCodeResult, Func<Address, String>)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddressProperty_BingGeocoder_GeoCodeResult_System_Func_BingGeocoder_Address_System_String__
+  commentId: M:BingGeocoder.GeoResultExtensions.GetFirstAddressProperty(BingGeocoder.GeoCodeResult,System.Func{BingGeocoder.Address,System.String})
+  name.vb: GetFirstAddressProperty(GeoCodeResult, Func(Of Address, String))
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddressProperty(BingGeocoder.GeoCodeResult, System.Func<BingGeocoder.Address, System.String>)
+  fullName.vb: BingGeocoder.GeoResultExtensions.GetFirstAddressProperty(BingGeocoder.GeoCodeResult, System.Func(Of BingGeocoder.Address, System.String))
+  nameWithType: GeoResultExtensions.GetFirstAddressProperty(GeoCodeResult, Func<Address, String>)
+  nameWithType.vb: GeoResultExtensions.GetFirstAddressProperty(GeoCodeResult, Func(Of Address, String))
+- uid: BingGeocoder.GeoResultExtensions.GetFirstAddressProperty*
+  name: GetFirstAddressProperty
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstAddressProperty_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetFirstAddressProperty
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstAddressProperty
+  nameWithType: GeoResultExtensions.GetFirstAddressProperty
+- uid: BingGeocoder.GeoResultExtensions.GetFirstCoordinate(BingGeocoder.GeoCodeResult)
+  name: GetFirstCoordinate(GeoCodeResult)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstCoordinate_BingGeocoder_GeoCodeResult_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetFirstCoordinate(BingGeocoder.GeoCodeResult)
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstCoordinate(BingGeocoder.GeoCodeResult)
+  nameWithType: GeoResultExtensions.GetFirstCoordinate(GeoCodeResult)
+- uid: BingGeocoder.GeoResultExtensions.GetFirstCoordinate*
+  name: GetFirstCoordinate
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstCoordinate_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetFirstCoordinate
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstCoordinate
+  nameWithType: GeoResultExtensions.GetFirstCoordinate
+- uid: BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress(BingGeocoder.GeoCodeResult)
+  name: GetFirstFormattedAddress(GeoCodeResult)
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstFormattedAddress_BingGeocoder_GeoCodeResult_
+  commentId: M:BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress(BingGeocoder.GeoCodeResult)
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress(BingGeocoder.GeoCodeResult)
+  nameWithType: GeoResultExtensions.GetFirstFormattedAddress(GeoCodeResult)
+- uid: BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress*
+  name: GetFirstFormattedAddress
+  href: api/BingGeocoder.GeoResultExtensions.html#BingGeocoder_GeoResultExtensions_GetFirstFormattedAddress_
+  commentId: Overload:BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress
+  fullName: BingGeocoder.GeoResultExtensions.GetFirstFormattedAddress
+  nameWithType: GeoResultExtensions.GetFirstFormattedAddress
+- uid: BingGeocoder.IGeoCoder
+  name: IGeoCoder
+  href: api/BingGeocoder.IGeoCoder.html
+  commentId: T:BingGeocoder.IGeoCoder
+  fullName: BingGeocoder.IGeoCoder
+  nameWithType: IGeoCoder
+- uid: BingGeocoder.IGeoCoder.GetAddress(System.Double,System.Double,System.Boolean,System.String)
+  name: GetAddress(Double, Double, Boolean, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetAddress_System_Double_System_Double_System_Boolean_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.GetAddress(System.Double,System.Double,System.Boolean,System.String)
+  fullName: BingGeocoder.IGeoCoder.GetAddress(System.Double, System.Double, System.Boolean, System.String)
+  nameWithType: IGeoCoder.GetAddress(Double, Double, Boolean, String)
+- uid: BingGeocoder.IGeoCoder.GetAddress*
+  name: GetAddress
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetAddress_
+  commentId: Overload:BingGeocoder.IGeoCoder.GetAddress
+  fullName: BingGeocoder.IGeoCoder.GetAddress
+  nameWithType: IGeoCoder.GetAddress
+- uid: BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,BingGeocoder.AddressEntityType)
+  name: GetAddressPart(Double, Double, AddressEntityType)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_BingGeocoder_AddressEntityType_
+  commentId: M:BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,BingGeocoder.AddressEntityType)
+  fullName: BingGeocoder.IGeoCoder.GetAddressPart(System.Double, System.Double, BingGeocoder.AddressEntityType)
+  nameWithType: IGeoCoder.GetAddressPart(Double, Double, AddressEntityType)
+- uid: BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,System.String)
+  name: GetAddressPart(Double, Double, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,System.String)
+  fullName: BingGeocoder.IGeoCoder.GetAddressPart(System.Double, System.Double, System.String)
+  nameWithType: IGeoCoder.GetAddressPart(Double, Double, String)
+- uid: BingGeocoder.IGeoCoder.GetAddressPart*
+  name: GetAddressPart
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetAddressPart_
+  commentId: Overload:BingGeocoder.IGeoCoder.GetAddressPart
+  fullName: BingGeocoder.IGeoCoder.GetAddressPart
+  nameWithType: IGeoCoder.GetAddressPart
+- uid: BingGeocoder.IGeoCoder.GetCoordinate(BingGeocoder.Address,System.Int32)
+  name: GetCoordinate(Address, Int32)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetCoordinate_BingGeocoder_Address_System_Int32_
+  commentId: M:BingGeocoder.IGeoCoder.GetCoordinate(BingGeocoder.Address,System.Int32)
+  fullName: BingGeocoder.IGeoCoder.GetCoordinate(BingGeocoder.Address, System.Int32)
+  nameWithType: IGeoCoder.GetCoordinate(Address, Int32)
+- uid: BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.Int32)
+  name: GetCoordinate(String, Int32)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_Int32_
+  commentId: M:BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.Int32)
+  fullName: BingGeocoder.IGeoCoder.GetCoordinate(System.String, System.Int32)
+  nameWithType: IGeoCoder.GetCoordinate(String, Int32)
+- uid: BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  name: GetCoordinate(String, String, String, String, String, Int32)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_String_System_String_System_String_System_String_System_Int32_
+  commentId: M:BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  fullName: BingGeocoder.IGeoCoder.GetCoordinate(System.String, System.String, System.String, System.String, System.String, System.Int32)
+  nameWithType: IGeoCoder.GetCoordinate(String, String, String, String, String, Int32)
+- uid: BingGeocoder.IGeoCoder.GetCoordinate*
+  name: GetCoordinate
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetCoordinate_
+  commentId: Overload:BingGeocoder.IGeoCoder.GetCoordinate
+  fullName: BingGeocoder.IGeoCoder.GetCoordinate
+  nameWithType: IGeoCoder.GetCoordinate
+- uid: BingGeocoder.IGeoCoder.GetFormattedAddress(System.Double,System.Double)
+  name: GetFormattedAddress(Double, Double)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetFormattedAddress_System_Double_System_Double_
+  commentId: M:BingGeocoder.IGeoCoder.GetFormattedAddress(System.Double,System.Double)
+  fullName: BingGeocoder.IGeoCoder.GetFormattedAddress(System.Double, System.Double)
+  nameWithType: IGeoCoder.GetFormattedAddress(Double, Double)
+- uid: BingGeocoder.IGeoCoder.GetFormattedAddress*
+  name: GetFormattedAddress
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetFormattedAddress_
+  commentId: Overload:BingGeocoder.IGeoCoder.GetFormattedAddress
+  fullName: BingGeocoder.IGeoCoder.GetFormattedAddress
+  nameWithType: IGeoCoder.GetFormattedAddress
+- uid: BingGeocoder.IGeoCoder.GetGeoCodeResult(BingGeocoder.Address,System.Int32,System.String)
+  name: GetGeoCodeResult(Address, Int32, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetGeoCodeResult_BingGeocoder_Address_System_Int32_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.GetGeoCodeResult(BingGeocoder.Address,System.Int32,System.String)
+  fullName: BingGeocoder.IGeoCoder.GetGeoCodeResult(BingGeocoder.Address, System.Int32, System.String)
+  nameWithType: IGeoCoder.GetGeoCodeResult(Address, Int32, String)
+- uid: BingGeocoder.IGeoCoder.GetGeoCodeResult(System.Double,System.Double,System.Boolean,System.String)
+  name: GetGeoCodeResult(Double, Double, Boolean, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetGeoCodeResult_System_Double_System_Double_System_Boolean_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.GetGeoCodeResult(System.Double,System.Double,System.Boolean,System.String)
+  fullName: BingGeocoder.IGeoCoder.GetGeoCodeResult(System.Double, System.Double, System.Boolean, System.String)
+  nameWithType: IGeoCoder.GetGeoCodeResult(Double, Double, Boolean, String)
+- uid: BingGeocoder.IGeoCoder.GetGeoCodeResult(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)
+  name: GetGeoCodeResult(String, String, String, String, String, Int32, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetGeoCodeResult_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.GetGeoCodeResult(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)
+  fullName: BingGeocoder.IGeoCoder.GetGeoCodeResult(System.String, System.String, System.String, System.String, System.String, System.Int32, System.String)
+  nameWithType: IGeoCoder.GetGeoCodeResult(String, String, String, String, String, Int32, String)
+- uid: BingGeocoder.IGeoCoder.GetGeoCodeResult*
+  name: GetGeoCodeResult
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_GetGeoCodeResult_
+  commentId: Overload:BingGeocoder.IGeoCoder.GetGeoCodeResult
+  fullName: BingGeocoder.IGeoCoder.GetGeoCodeResult
+  nameWithType: IGeoCoder.GetGeoCodeResult
+- uid: BingGeocoder.IGeoCoder.ParseAddress(System.String,System.String)
+  name: ParseAddress(String, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_ParseAddress_System_String_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.ParseAddress(System.String,System.String)
+  fullName: BingGeocoder.IGeoCoder.ParseAddress(System.String, System.String)
+  nameWithType: IGeoCoder.ParseAddress(String, String)
+- uid: BingGeocoder.IGeoCoder.ParseAddress*
+  name: ParseAddress
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_ParseAddress_
+  commentId: Overload:BingGeocoder.IGeoCoder.ParseAddress
+  fullName: BingGeocoder.IGeoCoder.ParseAddress
+  nameWithType: IGeoCoder.ParseAddress
+- uid: BingGeocoder.IGeoCoder.Query(System.String,System.Int32,System.String)
+  name: Query(String, Int32, String)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_Query_System_String_System_Int32_System_String_
+  commentId: M:BingGeocoder.IGeoCoder.Query(System.String,System.Int32,System.String)
+  fullName: BingGeocoder.IGeoCoder.Query(System.String, System.Int32, System.String)
+  nameWithType: IGeoCoder.Query(String, Int32, String)
+- uid: BingGeocoder.IGeoCoder.Query*
+  name: Query
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_Query_
+  commentId: Overload:BingGeocoder.IGeoCoder.Query
+  fullName: BingGeocoder.IGeoCoder.Query
+  nameWithType: IGeoCoder.Query
+- uid: BingGeocoder.IGeoCoder.QueryCoordinate(System.String,System.Int32)
+  name: QueryCoordinate(String, Int32)
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_QueryCoordinate_System_String_System_Int32_
+  commentId: M:BingGeocoder.IGeoCoder.QueryCoordinate(System.String,System.Int32)
+  fullName: BingGeocoder.IGeoCoder.QueryCoordinate(System.String, System.Int32)
+  nameWithType: IGeoCoder.QueryCoordinate(String, Int32)
+- uid: BingGeocoder.IGeoCoder.QueryCoordinate*
+  name: QueryCoordinate
+  href: api/BingGeocoder.IGeoCoder.html#BingGeocoder_IGeoCoder_QueryCoordinate_
+  commentId: Overload:BingGeocoder.IGeoCoder.QueryCoordinate
+  fullName: BingGeocoder.IGeoCoder.QueryCoordinate
+  nameWithType: IGeoCoder.QueryCoordinate
+- uid: BingGeocoder.Point
+  name: Point
+  href: api/BingGeocoder.Point.html
+  commentId: T:BingGeocoder.Point
+  fullName: BingGeocoder.Point
+  nameWithType: Point
+- uid: BingGeocoder.Point.coordinates
+  name: coordinates
+  href: api/BingGeocoder.Point.html#BingGeocoder_Point_coordinates
+  commentId: P:BingGeocoder.Point.coordinates
+  fullName: BingGeocoder.Point.coordinates
+  nameWithType: Point.coordinates
+- uid: BingGeocoder.Point.coordinates*
+  name: coordinates
+  href: api/BingGeocoder.Point.html#BingGeocoder_Point_coordinates_
+  commentId: Overload:BingGeocoder.Point.coordinates
+  fullName: BingGeocoder.Point.coordinates
+  nameWithType: Point.coordinates
+- uid: BingGeocoder.Point.type
+  name: type
+  href: api/BingGeocoder.Point.html#BingGeocoder_Point_type
+  commentId: P:BingGeocoder.Point.type
+  fullName: BingGeocoder.Point.type
+  nameWithType: Point.type
+- uid: BingGeocoder.Point.type*
+  name: type
+  href: api/BingGeocoder.Point.html#BingGeocoder_Point_type_
+  commentId: Overload:BingGeocoder.Point.type
+  fullName: BingGeocoder.Point.type
+  nameWithType: Point.type
+- uid: BingGeocoder.Resource
+  name: Resource
+  href: api/BingGeocoder.Resource.html
+  commentId: T:BingGeocoder.Resource
+  fullName: BingGeocoder.Resource
+  nameWithType: Resource
+- uid: BingGeocoder.Resource.__type
+  name: __type
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource___type
+  commentId: P:BingGeocoder.Resource.__type
+  fullName: BingGeocoder.Resource.__type
+  nameWithType: Resource.__type
+- uid: BingGeocoder.Resource.__type*
+  name: __type
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource___type_
+  commentId: Overload:BingGeocoder.Resource.__type
+  fullName: BingGeocoder.Resource.__type
+  nameWithType: Resource.__type
+- uid: BingGeocoder.Resource.address
+  name: address
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_address
+  commentId: P:BingGeocoder.Resource.address
+  fullName: BingGeocoder.Resource.address
+  nameWithType: Resource.address
+- uid: BingGeocoder.Resource.address*
+  name: address
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_address_
+  commentId: Overload:BingGeocoder.Resource.address
+  fullName: BingGeocoder.Resource.address
+  nameWithType: Resource.address
+- uid: BingGeocoder.Resource.bbox
+  name: bbox
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_bbox
+  commentId: P:BingGeocoder.Resource.bbox
+  fullName: BingGeocoder.Resource.bbox
+  nameWithType: Resource.bbox
+- uid: BingGeocoder.Resource.bbox*
+  name: bbox
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_bbox_
+  commentId: Overload:BingGeocoder.Resource.bbox
+  fullName: BingGeocoder.Resource.bbox
+  nameWithType: Resource.bbox
+- uid: BingGeocoder.Resource.confidence
+  name: confidence
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_confidence
+  commentId: P:BingGeocoder.Resource.confidence
+  fullName: BingGeocoder.Resource.confidence
+  nameWithType: Resource.confidence
+- uid: BingGeocoder.Resource.confidence*
+  name: confidence
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_confidence_
+  commentId: Overload:BingGeocoder.Resource.confidence
+  fullName: BingGeocoder.Resource.confidence
+  nameWithType: Resource.confidence
+- uid: BingGeocoder.Resource.entityType
+  name: entityType
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_entityType
+  commentId: P:BingGeocoder.Resource.entityType
+  fullName: BingGeocoder.Resource.entityType
+  nameWithType: Resource.entityType
+- uid: BingGeocoder.Resource.entityType*
+  name: entityType
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_entityType_
+  commentId: Overload:BingGeocoder.Resource.entityType
+  fullName: BingGeocoder.Resource.entityType
+  nameWithType: Resource.entityType
+- uid: BingGeocoder.Resource.geocodePoints
+  name: geocodePoints
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_geocodePoints
+  commentId: P:BingGeocoder.Resource.geocodePoints
+  fullName: BingGeocoder.Resource.geocodePoints
+  nameWithType: Resource.geocodePoints
+- uid: BingGeocoder.Resource.geocodePoints*
+  name: geocodePoints
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_geocodePoints_
+  commentId: Overload:BingGeocoder.Resource.geocodePoints
+  fullName: BingGeocoder.Resource.geocodePoints
+  nameWithType: Resource.geocodePoints
+- uid: BingGeocoder.Resource.matchCodes
+  name: matchCodes
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_matchCodes
+  commentId: P:BingGeocoder.Resource.matchCodes
+  fullName: BingGeocoder.Resource.matchCodes
+  nameWithType: Resource.matchCodes
+- uid: BingGeocoder.Resource.matchCodes*
+  name: matchCodes
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_matchCodes_
+  commentId: Overload:BingGeocoder.Resource.matchCodes
+  fullName: BingGeocoder.Resource.matchCodes
+  nameWithType: Resource.matchCodes
+- uid: BingGeocoder.Resource.name
+  name: name
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_name
+  commentId: P:BingGeocoder.Resource.name
+  fullName: BingGeocoder.Resource.name
+  nameWithType: Resource.name
+- uid: BingGeocoder.Resource.name*
+  name: name
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_name_
+  commentId: Overload:BingGeocoder.Resource.name
+  fullName: BingGeocoder.Resource.name
+  nameWithType: Resource.name
+- uid: BingGeocoder.Resource.point
+  name: point
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_point
+  commentId: P:BingGeocoder.Resource.point
+  fullName: BingGeocoder.Resource.point
+  nameWithType: Resource.point
+- uid: BingGeocoder.Resource.point*
+  name: point
+  href: api/BingGeocoder.Resource.html#BingGeocoder_Resource_point_
+  commentId: Overload:BingGeocoder.Resource.point
+  fullName: BingGeocoder.Resource.point
+  nameWithType: Resource.point
+- uid: BingGeocoder.ResourceSet
+  name: ResourceSet
+  href: api/BingGeocoder.ResourceSet.html
+  commentId: T:BingGeocoder.ResourceSet
+  fullName: BingGeocoder.ResourceSet
+  nameWithType: ResourceSet
+- uid: BingGeocoder.ResourceSet.estimatedTotal
+  name: estimatedTotal
+  href: api/BingGeocoder.ResourceSet.html#BingGeocoder_ResourceSet_estimatedTotal
+  commentId: P:BingGeocoder.ResourceSet.estimatedTotal
+  fullName: BingGeocoder.ResourceSet.estimatedTotal
+  nameWithType: ResourceSet.estimatedTotal
+- uid: BingGeocoder.ResourceSet.estimatedTotal*
+  name: estimatedTotal
+  href: api/BingGeocoder.ResourceSet.html#BingGeocoder_ResourceSet_estimatedTotal_
+  commentId: Overload:BingGeocoder.ResourceSet.estimatedTotal
+  fullName: BingGeocoder.ResourceSet.estimatedTotal
+  nameWithType: ResourceSet.estimatedTotal
+- uid: BingGeocoder.ResourceSet.resources
+  name: resources
+  href: api/BingGeocoder.ResourceSet.html#BingGeocoder_ResourceSet_resources
+  commentId: P:BingGeocoder.ResourceSet.resources
+  fullName: BingGeocoder.ResourceSet.resources
+  nameWithType: ResourceSet.resources
+- uid: BingGeocoder.ResourceSet.resources*
+  name: resources
+  href: api/BingGeocoder.ResourceSet.html#BingGeocoder_ResourceSet_resources_
+  commentId: Overload:BingGeocoder.ResourceSet.resources
+  fullName: BingGeocoder.ResourceSet.resources
+  nameWithType: ResourceSet.resources
+- uid: BingGeocoder.UserContext
+  name: UserContext
+  href: api/BingGeocoder.UserContext.html
+  commentId: T:BingGeocoder.UserContext
+  fullName: BingGeocoder.UserContext
+  nameWithType: UserContext
+- uid: BingGeocoder.UserContext.#ctor(System.String)
+  name: UserContext(String)
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext__ctor_System_String_
+  commentId: M:BingGeocoder.UserContext.#ctor(System.String)
+  fullName: BingGeocoder.UserContext.UserContext(System.String)
+  nameWithType: UserContext.UserContext(String)
+- uid: BingGeocoder.UserContext.#ctor(System.String,System.Tuple{System.Double,System.Double},System.Tuple{System.Double,System.Double,System.Double,System.Double})
+  name: UserContext(String, Tuple<Double, Double>, Tuple<Double, Double, Double, Double>)
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext__ctor_System_String_System_Tuple_System_Double_System_Double__System_Tuple_System_Double_System_Double_System_Double_System_Double__
+  commentId: M:BingGeocoder.UserContext.#ctor(System.String,System.Tuple{System.Double,System.Double},System.Tuple{System.Double,System.Double,System.Double,System.Double})
+  name.vb: UserContext(String, Tuple(Of Double, Double), Tuple(Of Double, Double, Double, Double))
+  fullName: BingGeocoder.UserContext.UserContext(System.String, System.Tuple<System.Double, System.Double>, System.Tuple<System.Double, System.Double, System.Double, System.Double>)
+  fullName.vb: BingGeocoder.UserContext.UserContext(System.String, System.Tuple(Of System.Double, System.Double), System.Tuple(Of System.Double, System.Double, System.Double, System.Double))
+  nameWithType: UserContext.UserContext(String, Tuple<Double, Double>, Tuple<Double, Double, Double, Double>)
+  nameWithType.vb: UserContext.UserContext(String, Tuple(Of Double, Double), Tuple(Of Double, Double, Double, Double))
+- uid: BingGeocoder.UserContext.#ctor(System.Tuple{System.Double,System.Double,System.Double,System.Double})
+  name: UserContext(Tuple<Double, Double, Double, Double>)
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext__ctor_System_Tuple_System_Double_System_Double_System_Double_System_Double__
+  commentId: M:BingGeocoder.UserContext.#ctor(System.Tuple{System.Double,System.Double,System.Double,System.Double})
+  name.vb: UserContext(Tuple(Of Double, Double, Double, Double))
+  fullName: BingGeocoder.UserContext.UserContext(System.Tuple<System.Double, System.Double, System.Double, System.Double>)
+  fullName.vb: BingGeocoder.UserContext.UserContext(System.Tuple(Of System.Double, System.Double, System.Double, System.Double))
+  nameWithType: UserContext.UserContext(Tuple<Double, Double, Double, Double>)
+  nameWithType.vb: UserContext.UserContext(Tuple(Of Double, Double, Double, Double))
+- uid: BingGeocoder.UserContext.#ctor(System.Tuple{System.Double,System.Double})
+  name: UserContext(Tuple<Double, Double>)
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext__ctor_System_Tuple_System_Double_System_Double__
+  commentId: M:BingGeocoder.UserContext.#ctor(System.Tuple{System.Double,System.Double})
+  name.vb: UserContext(Tuple(Of Double, Double))
+  fullName: BingGeocoder.UserContext.UserContext(System.Tuple<System.Double, System.Double>)
+  fullName.vb: BingGeocoder.UserContext.UserContext(System.Tuple(Of System.Double, System.Double))
+  nameWithType: UserContext.UserContext(Tuple<Double, Double>)
+  nameWithType.vb: UserContext.UserContext(Tuple(Of Double, Double))
+- uid: BingGeocoder.UserContext.#ctor*
+  name: UserContext
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext__ctor_
+  commentId: Overload:BingGeocoder.UserContext.#ctor
+  fullName: BingGeocoder.UserContext.UserContext
+  nameWithType: UserContext.UserContext
+- uid: BingGeocoder.UserContext.IPAddress
+  name: IPAddress
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_IPAddress
+  commentId: P:BingGeocoder.UserContext.IPAddress
+  fullName: BingGeocoder.UserContext.IPAddress
+  nameWithType: UserContext.IPAddress
+- uid: BingGeocoder.UserContext.IPAddress*
+  name: IPAddress
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_IPAddress_
+  commentId: Overload:BingGeocoder.UserContext.IPAddress
+  fullName: BingGeocoder.UserContext.IPAddress
+  nameWithType: UserContext.IPAddress
+- uid: BingGeocoder.UserContext.Location
+  name: Location
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_Location
+  commentId: P:BingGeocoder.UserContext.Location
+  fullName: BingGeocoder.UserContext.Location
+  nameWithType: UserContext.Location
+- uid: BingGeocoder.UserContext.Location*
+  name: Location
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_Location_
+  commentId: Overload:BingGeocoder.UserContext.Location
+  fullName: BingGeocoder.UserContext.Location
+  nameWithType: UserContext.Location
+- uid: BingGeocoder.UserContext.MapView
+  name: MapView
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_MapView
+  commentId: P:BingGeocoder.UserContext.MapView
+  fullName: BingGeocoder.UserContext.MapView
+  nameWithType: UserContext.MapView
+- uid: BingGeocoder.UserContext.MapView*
+  name: MapView
+  href: api/BingGeocoder.UserContext.html#BingGeocoder_UserContext_MapView_
+  commentId: Overload:BingGeocoder.UserContext.MapView
+  fullName: BingGeocoder.UserContext.MapView
+  nameWithType: UserContext.MapView
