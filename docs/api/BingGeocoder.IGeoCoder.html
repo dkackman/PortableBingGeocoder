@@ -1,0 +1,963 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IGeoCoder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IGeoCoder
+   ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BingGeocoder.IGeoCoder">
+  
+  
+  <h1 id="BingGeocoder_IGeoCoder" data-uid="BingGeocoder.IGeoCoder">Interface IGeoCoder
+  </h1>
+  <div class="markdown level0 summary"><p>GeoCoder interface in case mocking is needed</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4s3w1d(v=vs.110).aspx">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BingGeocoder.html">BingGeocoder</a></h6>
+  <h6><strong>Assembly</strong>: BingGeocoder.dll</h6>
+  <h5 id="BingGeocoder_IGeoCoder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IGeoCoder : IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetAddress_System_Double_System_Double_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetAddress(System.Double%2CSystem.Double%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L105">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetAddress_" data-uid="BingGeocoder.IGeoCoder.GetAddress*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetAddress_System_Double_System_Double_System_Boolean_System_String_" data-uid="BingGeocoder.IGeoCoder.GetAddress(System.Double,System.Double,System.Boolean,System.String)">GetAddress(Double, Double, Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the address of a location</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Address&gt; GetAddress(double lat, double lon, bool includeNeighborhood = false, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lat</span></td>
+        <td><p>Latitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lon</span></td>
+        <td><p>Longitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><span class="parametername">includeNeighborhood</span></td>
+        <td><p>Specifies to include the neighborhood in the response when it is available.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.Address.html">Address</a>&gt;</td>
+        <td><p>The address of the first result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_BingGeocoder_AddressEntityType_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetAddressPart(System.Double%2CSystem.Double%2CBingGeocoder.AddressEntityType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L95">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetAddressPart_" data-uid="BingGeocoder.IGeoCoder.GetAddressPart*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_BingGeocoder_AddressEntityType_" data-uid="BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,BingGeocoder.AddressEntityType)">GetAddressPart(Double, Double, AddressEntityType)</h4>
+  <div class="markdown level1 summary"><p>Retreives part of an address at the geo coordinate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetAddressPart(double lat, double lon, AddressEntityType entityType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lat</span></td>
+        <td><p>Latitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lon</span></td>
+        <td><p>Longitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="BingGeocoder.AddressEntityType.html">AddressEntityType</a></td>
+        <td><span class="parametername">entityType</span></td>
+        <td><p>The entity type part to return</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><p>The address part associated with the entityType, for the first result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetAddressPart(System.Double%2CSystem.Double%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L86">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetAddressPart_" data-uid="BingGeocoder.IGeoCoder.GetAddressPart*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetAddressPart_System_Double_System_Double_System_String_" data-uid="BingGeocoder.IGeoCoder.GetAddressPart(System.Double,System.Double,System.String)">GetAddressPart(Double, Double, String)</h4>
+  <div class="markdown level1 summary"><p>Retreives part of an address at the geo coordinate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetAddressPart(double lat, double lon, string entityType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lat</span></td>
+        <td><p>Latitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lon</span></td>
+        <td><p>Longitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">entityType</span></td>
+        <td><p>The entity type part to return</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><p>The address part associated with the entityType, for the first result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetCoordinate_BingGeocoder_Address_System_Int32_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetCoordinate(BingGeocoder.Address%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L37">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetCoordinate_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetCoordinate_BingGeocoder_Address_System_Int32_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate(BingGeocoder.Address,System.Int32)">GetCoordinate(Address, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retreives the geo coordinate of a full or partial address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;double, double&gt;&gt; GetCoordinate(Address address, int maxResults = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BingGeocoder.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx">Tuple</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>&gt;&gt;</td>
+        <td><p>The coordinate of the address. {0,0} if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetCoordinate(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L45">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetCoordinate_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_Int32_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.Int32)">GetCoordinate(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the geo coordinate of a landmark</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;double, double&gt;&gt; GetCoordinate(string landMark, int maxResults = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">landMark</span></td>
+        <td><p>A landmark. ex Eiffel Tower</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The Maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx">Tuple</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>&gt;&gt;</td>
+        <td><p>The coordinates of a landmark {0,0} if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_String_System_String_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetCoordinate(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L29">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetCoordinate_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetCoordinate_System_String_System_String_System_String_System_String_System_String_System_Int32_" data-uid="BingGeocoder.IGeoCoder.GetCoordinate(System.String,System.String,System.String,System.String,System.String,System.Int32)">GetCoordinate(String, String, String, String, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the geo coordinate from detailed address inputs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;double, double&gt;&gt; GetCoordinate(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">addressLine</span></td>
+        <td><p>The address part. ex One Microsoft Way</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">locality</span></td>
+        <td><p>City part. ex Redmond</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">adminDistrict</span></td>
+        <td><p>State part. ex WA</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">postalCode</span></td>
+        <td><p>Postal code part. ex 98052</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">countryRegion</span></td>
+        <td><p>Country part. ex US</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx">Tuple</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>&gt;&gt;</td>
+        <td><p>The coordinate of the address. {0,0} if not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetFormattedAddress_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetFormattedAddress(System.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L113">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetFormattedAddress_" data-uid="BingGeocoder.IGeoCoder.GetFormattedAddress*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetFormattedAddress_System_Double_System_Double_" data-uid="BingGeocoder.IGeoCoder.GetFormattedAddress(System.Double,System.Double)">GetFormattedAddress(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the formatted address for the geo coordinate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetFormattedAddress(double lat, double lon)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lat</span></td>
+        <td><p>Latitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lon</span></td>
+        <td><p>Longitude</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</td>
+        <td><p>Formatted address of the first result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetGeoCodeResult_BingGeocoder_Address_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetGeoCodeResult(BingGeocoder.Address%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L77">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetGeoCodeResult_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetGeoCodeResult_BingGeocoder_Address_System_Int32_System_String_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult(BingGeocoder.Address,System.Int32,System.String)">GetGeoCodeResult(Address, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Retreives the GeoCodeResult for the given full or partial address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;GeoCodeResult&gt; GetGeoCodeResult(Address address, int maxResults = 1, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BingGeocoder.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.GeoCodeResult.html">GeoCodeResult</a>&gt;</td>
+        <td><p>GeoCodeResult</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetGeoCodeResult_System_Double_System_Double_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetGeoCodeResult(System.Double%2CSystem.Double%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L55">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetGeoCodeResult_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetGeoCodeResult_System_Double_System_Double_System_Boolean_System_String_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult(System.Double,System.Double,System.Boolean,System.String)">GetGeoCodeResult(Double, Double, Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>Retreives the GeoCodeResult for the given geo coordinate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;GeoCodeResult&gt; GetGeoCodeResult(double lat, double lon, bool includeNeighborhood = false, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lat</span></td>
+        <td><p>Latitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a></td>
+        <td><span class="parametername">lon</span></td>
+        <td><p>Longitude</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></td>
+        <td><span class="parametername">includeNeighborhood</span></td>
+        <td><p>Specifies to include the neighborhood in the response when it is available.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.GeoCodeResult.html">GeoCodeResult</a>&gt;</td>
+        <td><p>GeoCodeResult</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_GetGeoCodeResult_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.GetGeoCodeResult(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L68">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_GetGeoCodeResult_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_GetGeoCodeResult_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_" data-uid="BingGeocoder.IGeoCoder.GetGeoCodeResult(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)">GetGeoCodeResult(String, String, String, String, String, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Retreives the GeoCodeResult for the given address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;GeoCodeResult&gt; GetGeoCodeResult(string addressLine, string locality, string adminDistrict, string postalCode, string countryRegion, int maxResults = 1, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">addressLine</span></td>
+        <td><p>The address part. ex One Microsoft Way</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">locality</span></td>
+        <td><p>City part. ex Redmond</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">adminDistrict</span></td>
+        <td><p>State part. ex WA</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">postalCode</span></td>
+        <td><p>Postal code part. ex 98052</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">countryRegion</span></td>
+        <td><p>Country part. ex US</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.GeoCodeResult.html">GeoCodeResult</a>&gt;</td>
+        <td><p>GeoCodeResult</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_ParseAddress_System_String_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.ParseAddress(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L17">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_ParseAddress_" data-uid="BingGeocoder.IGeoCoder.ParseAddress*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_ParseAddress_System_String_System_String_" data-uid="BingGeocoder.IGeoCoder.ParseAddress(System.String,System.String)">ParseAddress(String, String)</h4>
+  <div class="markdown level1 summary"><p>Uses the Bing service to attempt to parse an address into its constuent parts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Address&gt; ParseAddress(string address, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address to parse</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.Address.html">Address</a>&gt;</td>
+        <td><p>The parsed address. Null if not successfully parsed by Bing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_Query_System_String_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.Query(System.String%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L122">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_Query_" data-uid="BingGeocoder.IGeoCoder.Query*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_Query_System_String_System_Int32_System_String_" data-uid="BingGeocoder.IGeoCoder.Query(System.String,System.Int32,System.String)">Query(String, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the geo result of a location, such as an address or landmark name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;GeoCodeResult&gt; Query(string query, int maxResults = 1, string include = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>The location query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">include</span></td>
+        <td><p>Specifies additional values to include. Use &quot;ciso2&quot; to include the ISO country code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="BingGeocoder.GeoCodeResult.html">GeoCodeResult</a>&gt;</td>
+        <td><p>GeoCodeResult</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder_QueryCoordinate_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder.QueryCoordinate(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L130">View Source</a>
+  </span>
+  <a id="BingGeocoder_IGeoCoder_QueryCoordinate_" data-uid="BingGeocoder.IGeoCoder.QueryCoordinate*"></a>
+  <h4 id="BingGeocoder_IGeoCoder_QueryCoordinate_System_String_System_Int32_" data-uid="BingGeocoder.IGeoCoder.QueryCoordinate(System.String,System.Int32)">QueryCoordinate(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the geo coordinate of a location, such as an address or landmark name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;double, double&gt;&gt; QueryCoordinate(string query, int maxResults = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>The location query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></td>
+        <td><span class="parametername">maxResults</span></td>
+        <td><p>The maximum number of results to return. Defaults to 1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx">Tuple</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.double(v=vs.110).aspx">Double</a>&gt;&gt;</td>
+        <td><p>The coordinate of the first result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dkackman/PortableBingGeocoder/new/master/apiSpec/new?filename=BingGeocoder_IGeoCoder.md&amp;value=---%0Auid%3A%20BingGeocoder.IGeoCoder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dkackman/PortableBingGeocoder/blob/master/BingGeoCoder/IGeoCoder.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
